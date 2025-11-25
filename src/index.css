@@ -2,13 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Подключение шрифта Aeronic Pro */
+@font-face {
+  font-family: 'Aeronic Pro';
+  src: url('/fonts/AeronicPro-Regular.woff2') format('woff2'),
+       url('/fonts/AeronicPro-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeronic Pro';
+  src: url('/fonts/AeronicPro-Bold.woff2') format('woff2'),
+       url('/fonts/AeronicPro-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aeronic Pro';
+  src: url('/fonts/AeronicPro-Medium.woff2') format('woff2'),
+       url('/fonts/AeronicPro-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
-  * {
-    @apply border-border;
-  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-white text-brand-darkBlue;
+    font-family: 'Aeronic Pro', system-ui, -apple-system, sans-serif;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-brand;
+    color: #002A47;
   }
 }
 
