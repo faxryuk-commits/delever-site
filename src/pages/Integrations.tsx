@@ -15,18 +15,18 @@ export function Integrations() {
       <div className="min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         {/* Hero */}
         <section className="container mx-auto max-w-7xl mb-20">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Все ваши сервисы
-              <br />
-              <span className="text-primary-600">в одной экосистеме</span>
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6">
+              Хаб интеграций Delever
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Интеграции с агрегаторами, POS-системами, платёжными шлюзами и другими сервисами
+            <p className="text-xl text-brand-darkBlue/80 mb-8 leading-relaxed">
+              Мы сотрудничаем с лучшими компаниями в сфере заказа еды, чтобы предложить высококачественные и надёжные API-интеграции с приложениями доставки, POS-системами, программным обеспечением для управления запасами, решениями для последней мили и многим другим.
             </p>
-            <Button size="lg" onClick={() => setContactFormOpen(true)}>
-              Подключить ваши интеграции
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" onClick={() => setContactFormOpen(true)}>
+                Запросить интеграцию
+              </Button>
+            </div>
           </div>
         </section>
 
@@ -34,13 +34,13 @@ export function Integrations() {
         <AggregatorIntegration />
 
         {/* POS Systems */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-4xl font-bold text-brand-darkBlue mb-4">
                 POS-системы
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300">
+              <p className="text-xl text-brand-darkBlue/80">
                 Автоматическая синхронизация заказов с вашей кассой
               </p>
             </div>
@@ -48,7 +48,7 @@ export function Integrations() {
               {posSystems.map((pos, idx) => (
                 <div
                   key={idx}
-                  className="bg-white dark:bg-gray-800 px-6 py-3 rounded-lg border border-gray-200 dark:border-gray-700 text-sm font-medium shadow-sm hover:shadow-md transition-shadow"
+                  className="bg-white px-6 py-3 rounded-lg border-2 border-brand-lightTeal/30 text-sm font-medium shadow-sm hover:shadow-md hover:border-brand-darkBlue transition-all text-brand-darkBlue"
                 >
                   {pos}
                 </div>
@@ -58,13 +58,13 @@ export function Integrations() {
         </section>
 
         {/* Payment Gateways */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBeige">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-4xl font-bold text-brand-darkBlue mb-4">
                 Платёжные шлюзы
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300">
+              <p className="text-xl text-brand-darkBlue/80">
                 Поддержка всех популярных способов оплаты
               </p>
             </div>
@@ -72,7 +72,7 @@ export function Integrations() {
               {paymentGateways.map((gateway, idx) => (
                 <div
                   key={idx}
-                  className="bg-white dark:bg-gray-800 px-6 py-3 rounded-lg border border-gray-200 dark:border-gray-700 text-sm font-medium shadow-sm hover:shadow-md transition-shadow"
+                  className="bg-white px-6 py-3 rounded-lg border-2 border-brand-lightTeal/30 text-sm font-medium shadow-sm hover:shadow-md hover:border-brand-darkBlue transition-all text-brand-darkBlue"
                 >
                   {gateway}
                 </div>
@@ -82,39 +82,39 @@ export function Integrations() {
         </section>
 
         {/* API & Enterprise */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-4xl font-bold text-brand-darkBlue mb-4">
                 API & Enterprise
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300">
+              <p className="text-xl text-brand-darkBlue/80">
                 Для крупных клиентов и кастомных интеграций
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 text-center">
-                <Code className="h-8 w-8 text-primary-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <div className="bg-white rounded-xl p-6 border-2 border-brand-lightTeal/30 text-center hover:border-brand-darkBlue transition-all">
+                <Code className="h-8 w-8 text-brand-darkBlue mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-brand-darkBlue mb-2">
                   API доступ
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-brand-darkBlue/70">
                   Полный доступ к API для кастомных интеграций
                 </p>
               </div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 text-center">
-                <Shield className="h-8 w-8 text-primary-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">SLA</h3>
-                <p className="text-gray-600 dark:text-gray-300">
+              <div className="bg-white rounded-xl p-6 border-2 border-brand-lightTeal/30 text-center hover:border-brand-darkBlue transition-all">
+                <Shield className="h-8 w-8 text-brand-darkBlue mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-brand-darkBlue mb-2">SLA</h3>
+                <p className="text-brand-darkBlue/70">
                   Гарантированное время отклика и стабильность
                 </p>
               </div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 text-center">
-                <HeadphonesIcon className="h-8 w-8 text-primary-600 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+              <div className="bg-white rounded-xl p-6 border-2 border-brand-lightTeal/30 text-center hover:border-brand-darkBlue transition-all">
+                <HeadphonesIcon className="h-8 w-8 text-brand-darkBlue mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-brand-darkBlue mb-2">
                   Выделенный менеджер
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-brand-darkBlue/70">
                   Персональная поддержка для Enterprise клиентов
                 </p>
               </div>
@@ -123,10 +123,10 @@ export function Integrations() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-600 text-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-darkBlue text-white">
           <div className="container mx-auto max-w-4xl text-center">
             <h2 className="text-4xl font-bold mb-4">Готовы подключить интеграции?</h2>
-            <p className="text-xl text-primary-100 mb-8">
+            <p className="text-xl text-white/90 mb-8">
               Свяжитесь с нами и мы поможем настроить все необходимые интеграции
             </p>
             <Button size="lg" variant="secondary" onClick={() => setContactFormOpen(true)}>
