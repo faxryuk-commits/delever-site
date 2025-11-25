@@ -53,7 +53,7 @@ function AnimatedCounter({ value, suffix = '', prefix = '', duration = 2000 }: A
   }, [hasAnimated, value, duration])
 
   return (
-    <div ref={ref} className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+    <div ref={ref} className="text-4xl md:text-5xl font-bold text-brand-darkBlue">
       {prefix}
       {count.toLocaleString()}
       {suffix}
@@ -70,10 +70,10 @@ const stats = [
 
 export function SocialProof() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBeige">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
             Delever в цифрах
           </h2>
         </div>
@@ -82,7 +82,7 @@ export function SocialProof() {
           {stats.map((stat, idx) => (
             <div key={idx} className="text-center">
               <AnimatedCounter value={stat.value} suffix={stat.suffix} />
-              <p className="text-lg text-gray-600 dark:text-gray-300 mt-2">{stat.label}</p>
+              <p className="text-lg text-brand-darkBlue/70 mt-2">{stat.label}</p>
             </div>
           ))}
         </div>

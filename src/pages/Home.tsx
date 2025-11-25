@@ -16,14 +16,12 @@ export function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <ProblemSolution />
-      <TargetAudience />
-      <FeaturesShowcase />
+      <Clients />
       <ProductOverview />
+      <FeaturesShowcase />
       <AggregatorIntegration />
       <AILayer />
       <CaseStudies />
-      <Clients />
       <SocialProof />
       <Pricing />
       <FAQ />

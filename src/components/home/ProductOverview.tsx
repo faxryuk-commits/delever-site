@@ -34,37 +34,66 @@ const products = [
 
 export function ProductOverview() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Продукты Delever
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
+            Найдите правильное решение для каждого этапа роста
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Четыре модуля, которые работают вместе как единая система
+          <p className="text-xl text-brand-darkBlue/80 max-w-3xl mx-auto">
+            Наши решения разработаны, чтобы помочь вам привлекать и удерживать клиентов, развивать бизнес и сохранять контроль над тем, что важно для вас.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {products.map((product, idx) => (
-            <Link
-              key={idx}
-              to={product.link}
-              className="group bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-200 dark:border-gray-700"
-            >
-              <div className={`${product.color} w-12 h-12 rounded-lg flex items-center justify-center text-white mb-4`}>
-                {product.icon}
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                {product.title}
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">{product.description}</p>
-              <div className="flex items-center text-primary-600 font-medium group-hover:translate-x-1 transition-transform">
-                Узнать больше
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </div>
-            </Link>
-          ))}
+        {/* Категории в стиле Deliverect */}
+        <div className="mb-12">
+          <h3 className="text-2xl font-semibold text-brand-darkBlue mb-6">Собственные каналы продаж</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {products.slice(0, 2).map((product, idx) => (
+              <Link
+                key={idx}
+                to={product.link}
+                className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all border-2 border-brand-lightTeal/30 hover:border-brand-darkBlue"
+              >
+                <div className="w-14 h-14 bg-brand-darkBlue rounded-lg flex items-center justify-center text-white mb-4">
+                  {product.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-brand-darkBlue mb-2">
+                  {product.title}
+                </h3>
+                <p className="text-brand-darkBlue/70 mb-4 text-sm leading-relaxed">{product.description}</p>
+                <div className="flex items-center text-brand-darkBlue font-semibold group-hover:translate-x-1 transition-transform text-sm">
+                  Узнать больше
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-12">
+          <h3 className="text-2xl font-semibold text-brand-darkBlue mb-6">Операции и аналитика</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {products.slice(2).map((product, idx) => (
+              <Link
+                key={idx}
+                to={product.link}
+                className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all border-2 border-brand-lightTeal/30 hover:border-brand-darkBlue"
+              >
+                <div className="w-14 h-14 bg-brand-darkBlue rounded-lg flex items-center justify-center text-white mb-4">
+                  {product.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-brand-darkBlue mb-2">
+                  {product.title}
+                </h3>
+                <p className="text-brand-darkBlue/70 mb-4 text-sm leading-relaxed">{product.description}</p>
+                <div className="flex items-center text-brand-darkBlue font-semibold group-hover:translate-x-1 transition-transform text-sm">
+                  Узнать больше
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </section>

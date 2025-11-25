@@ -12,26 +12,21 @@ const clients = [
 
 export function Clients() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBeige">
+    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white border-y border-brand-lightTeal/20">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
-            Наши клиенты
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-bold text-brand-darkBlue mb-2">
+            Поддерживаемые ведущие сети ресторанов
           </h2>
-          <p className="text-xl text-brand-darkBlue/80">
-            Ведущие сети ресторанов доверяют нам управление своей доставкой
-          </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-8">
+        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 opacity-70">
           {clients.map((client, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-lg p-6 flex items-center justify-center border border-brand-lightTeal/30 hover:shadow-md transition-shadow"
+              className="text-xl md:text-2xl font-semibold text-brand-darkBlue/60 hover:text-brand-darkBlue transition-colors"
             >
-              <span className="text-lg font-semibold text-brand-darkBlue/70">
-                {client}
-              </span>
+              {client}
             </div>
           ))}
         </div>
