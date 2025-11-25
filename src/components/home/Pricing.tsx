@@ -70,13 +70,13 @@ const plans = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBeige">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
             Тарифы Delever
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300">
+          <p className="text-xl text-brand-darkBlue/80">
             Выберите план, который подходит вашему бизнесу
           </p>
         </div>
@@ -85,32 +85,32 @@ export function Pricing() {
           {plans.map((plan, idx) => (
             <div
               key={idx}
-              className={`bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border-2 ${
+              className={`bg-white rounded-xl p-6 shadow-sm border-2 ${
                 plan.highlight
-                  ? 'border-primary-500 dark:border-primary-500'
-                  : 'border-gray-200 dark:border-gray-700'
+                  ? 'border-brand-darkBlue'
+                  : 'border-brand-lightTeal/30'
               }`}
             >
               {plan.highlight && (
-                <div className="bg-primary-600 text-white text-xs font-semibold px-2 py-1 rounded-full inline-block mb-4">
+                <div className="bg-brand-darkBlue text-white text-xs font-semibold px-2 py-1 rounded-full inline-block mb-4">
                   Популярный
                 </div>
               )}
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+              <h3 className="text-2xl font-bold text-brand-darkBlue mb-2">
                 {plan.name}
               </h3>
               <div className="mb-4">
-                <span className="text-3xl font-bold text-gray-900 dark:text-white">
+                <span className="text-3xl font-bold text-brand-darkBlue">
                   {plan.price}
                 </span>
-                <span className="text-gray-600 dark:text-gray-400">{plan.period}</span>
+                <span className="text-brand-darkBlue/60">{plan.period}</span>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">{plan.description}</p>
+              <p className="text-sm text-brand-darkBlue/70 mb-6">{plan.description}</p>
               <ul className="space-y-3 mb-6">
                 {plan.features.map((feature, fIdx) => (
                   <li key={fIdx} className="flex items-start space-x-2">
-                    <Check className="h-5 w-5 text-primary-600 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-gray-700 dark:text-gray-300">{feature}</span>
+                    <Check className="h-5 w-5 text-brand-darkBlue mt-0.5 flex-shrink-0" />
+                    <span className="text-sm text-brand-darkBlue/80">{feature}</span>
                   </li>
                 ))}
               </ul>

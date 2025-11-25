@@ -38,10 +38,10 @@ export function TargetAudience() {
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
             Для кого Delever
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-brand-darkBlue/80 max-w-2xl mx-auto">
             Решение для всех типов заведений общественного питания
           </p>
         </div>
@@ -50,22 +50,22 @@ export function TargetAudience() {
           {audiences.map((audience, idx) => (
             <div
               key={idx}
-              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700"
+              className="bg-white rounded-xl p-6 shadow-sm border border-brand-lightTeal/30"
             >
-              <div className="text-primary-600 mb-4">{audience.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+              <div className="text-brand-darkBlue mb-4">{audience.icon}</div>
+              <h3 className="text-xl font-semibold text-brand-darkBlue mb-3">
                 {audience.title}
               </h3>
               <div className="space-y-2">
                 <div>
-                  <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">
+                  <p className="text-sm font-medium text-brand-darkBlue/60 mb-1">
                     Проблема:
                   </p>
-                  <p className="text-sm text-gray-700 dark:text-gray-300">{audience.pain}</p>
+                  <p className="text-sm text-brand-darkBlue/80">{audience.pain}</p>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-primary-600 mb-1">Выгода:</p>
-                  <p className="text-sm text-gray-700 dark:text-gray-300">{audience.benefit}</p>
+                  <p className="text-sm font-medium text-brand-darkBlue mb-1">Выгода:</p>
+                  <p className="text-sm text-brand-darkBlue/80">{audience.benefit}</p>
                 </div>
               </div>
             </div>
