@@ -37,7 +37,7 @@ export function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 dark:bg-gray-900/80 dark:border-gray-800">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-brand-lightTeal/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -54,8 +54,8 @@ export function Header() {
                   className={cn(
                     'px-3 py-2 rounded-md text-sm font-medium transition-colors',
                     isActive(item.path)
-                      ? 'bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300'
-                      : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
+                      ? 'bg-brand-lightBlue text-brand-darkBlue font-semibold'
+                      : 'text-brand-darkBlue hover:bg-brand-lightTeal/30'
                   )}
                 >
                   {item.label}
@@ -78,7 +78,7 @@ export function Header() {
 
               {/* Language Selector */}
               <div className="hidden sm:flex items-center space-x-1">
-                <Globe className="h-4 w-4 text-gray-500" />
+                <Globe className="h-4 w-4 text-brand-darkBlue/60" />
                 <select
                   value={language}
                   onChange={(e) => setLanguage(e.target.value as 'ru' | 'en' | 'uz')}
@@ -92,7 +92,7 @@ export function Header() {
 
               {/* Region Selector */}
               <div className="hidden md:flex items-center space-x-1">
-                <MapPin className="h-4 w-4 text-gray-500" />
+                <MapPin className="h-4 w-4 text-brand-darkBlue/60" />
                 <select
                   value={region}
                   onChange={(e) => setRegion(e.target.value as 'uz' | 'kz' | 'ru' | 'ae')}
@@ -141,8 +141,8 @@ export function Header() {
                   className={cn(
                     'block px-3 py-2 rounded-md text-base font-medium',
                     isActive(item.path)
-                      ? 'bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300'
-                      : 'text-gray-700 dark:text-gray-300'
+                      ? 'bg-brand-lightBlue text-brand-darkBlue font-semibold'
+                      : 'text-brand-darkBlue'
                   )}
                 >
                   {item.label}

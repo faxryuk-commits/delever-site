@@ -8,12 +8,12 @@ export function CallToAction() {
 
   return (
     <>
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-primary-600 to-primary-700 text-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-darkBlue text-white">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Запустите собственную доставку за 7 дней
           </h2>
-          <p className="text-xl mb-8 text-primary-100">
+          <p className="text-xl mb-8 text-white/90">
             Получите демо-версию и посмотрите, как Delever может помочь вашему бизнесу
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
