@@ -1,11 +1,11 @@
-import React from 'react'
+import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
 import { FeaturesShowcase } from '@/components/home/FeaturesShowcase'
 import { CheckCircle, ArrowRight, Calendar, Palette, Code, Rocket } from 'lucide-react'
 
 export function Channels() {
-  const [contactFormOpen, setContactFormOpen] = React.useState(false)
+  const [contactFormOpen, setContactFormOpen] = useState(false)
 
   const steps = [
     { icon: <Calendar className="h-6 w-6" />, title: 'Бриф', description: 'Обсуждаем ваши потребности и цели' },

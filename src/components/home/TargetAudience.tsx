@@ -1,4 +1,3 @@
-import React from 'react'
 import { Utensils, Coffee, Building2, Store, Users } from 'lucide-react'
 
 const audiences = [

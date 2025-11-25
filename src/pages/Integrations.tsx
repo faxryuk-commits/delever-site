@@ -1,11 +1,11 @@
-import React from 'react'
+import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
 import { AggregatorIntegration } from '@/components/home/AggregatorIntegration'
-import { CheckCircle, ArrowRight, Code, Shield, HeadphonesIcon } from 'lucide-react'
+import { ArrowRight, Code, Shield, HeadphonesIcon } from 'lucide-react'
 
 export function Integrations() {
-  const [contactFormOpen, setContactFormOpen] = React.useState(false)
+  const [contactFormOpen, setContactFormOpen] = useState(false)
 
   const posSystems = ['iiko', 'R-Keeper', 'Syrve', 'Poster', 'Paloma', 'TouchBistro']
   const paymentGateways = ['Click', 'Payme', 'Uzum', 'Stripe', 'Yandex Pay', 'PayPal']

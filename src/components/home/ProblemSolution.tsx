@@ -1,4 +1,3 @@
-import React from 'react'
 import { XCircle, CheckCircle } from 'lucide-react'
 
 const problems = [

@@ -1,10 +1,10 @@
-import React from 'react'
+import { useState } from 'react'
 import { Button } from '../ui/Button'
 import { ContactForm } from '../ContactForm'
 import { ArrowRight } from 'lucide-react'
 
 export function Hero() {
-  const [contactFormOpen, setContactFormOpen] = React.useState(false)
+  const [contactFormOpen, setContactFormOpen] = useState(false)
 
   return (
     <>

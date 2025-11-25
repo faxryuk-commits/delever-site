@@ -1,6 +1,6 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin, Linkedin, Twitter, Facebook, Instagram } from 'lucide-react'
+import { Logo } from './Logo'
 
 export function Footer() {
   return (
@@ -9,11 +9,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About */}
           <div>
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">D</span>
-              </div>
-              <span className="text-xl font-bold text-white">Delever</span>
+            <div className="mb-4">
+              <Logo variant="white" height={40} />
             </div>
             <p className="text-sm mb-4">
               Операционная система для доставки. Единая платформа для управления всеми каналами

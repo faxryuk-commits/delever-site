@@ -1,10 +1,10 @@
-import React from 'react'
+import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
 import { Users, Mail, Gift, Zap, ArrowRight } from 'lucide-react'
 
 export function Marketing() {
-  const [contactFormOpen, setContactFormOpen] = React.useState(false)
+  const [contactFormOpen, setContactFormOpen] = useState(false)
 
   const features = [
     {

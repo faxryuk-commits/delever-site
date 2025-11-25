@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X, Moon, Sun, Globe, MapPin } from 'lucide-react'
 import { useTheme } from '@/contexts/ThemeContext'
@@ -6,6 +6,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 import { useRegion } from '@/contexts/RegionContext'
 import { Button } from './ui/Button'
 import { ContactForm } from './ContactForm'
+import { Logo } from './Logo'
 import { cn } from '@/lib/utils'
 
 export function Header() {
@@ -40,11 +41,8 @@ export function Header() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">D</span>
-              </div>
-              <span className="text-xl font-bold text-gray-900 dark:text-white">Delever</span>
+            <Link to="/" className="flex items-center">
+              <Logo height={32} />
             </Link>
 
             {/* Desktop Navigation */}

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Hero } from '@/components/home/Hero'
 import { ProblemSolution } from '@/components/home/ProblemSolution'
 import { TargetAudience } from '@/components/home/TargetAudience'

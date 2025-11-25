@@ -1,4 +1,3 @@
-import React from 'react'
 import { CheckCircle, Zap, Globe, Clock, Tablet } from 'lucide-react'
 
 const aggregators = ['Wolt', 'Yandex Food', 'Talabat', 'Deliveroo', 'Noon', 'Uzum Tezkor']

@@ -1,4 +1,3 @@
-import React from 'react'
 import { Brain, TrendingUp, Package, Users, DollarSign } from 'lucide-react'
 
 const aiFeatures = [

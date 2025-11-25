@@ -1,4 +1,3 @@
-import React from 'react'
 import { Link } from 'react-router-dom'
 import { ShoppingCart, Truck, BarChart3, Megaphone, ArrowRight } from 'lucide-react'
 
