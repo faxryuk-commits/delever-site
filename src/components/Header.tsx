@@ -1,0 +1,180 @@
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { Menu, X, Moon, Sun, Globe, MapPin } from 'lucide-react'
+import { useTheme } from '@/contexts/ThemeContext'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { useRegion } from '@/contexts/RegionContext'
+import { Button } from './ui/Button'
+import { ContactForm } from './ContactForm'
+import { cn } from '@/lib/utils'
+
+export function Header() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [contactFormOpen, setContactFormOpen] = useState(false)
+  const { theme, toggleTheme } = useTheme()
+  const { language, setLanguage } = useLanguage()
+  const { region, setRegion } = useRegion()
+  const location = useLocation()
+
+  const navItems = [
+    { path: '/', label: 'Главная' },
+    { path: '/products/channels', label: 'Каналы продаж' },
+    { path: '/products/operations', label: 'Операции' },
+    { path: '/products/analytics', label: 'Аналитика' },
+    { path: '/products/marketing', label: 'Маркетинг' },
+    { path: '/integrations', label: 'Интеграции' },
+    { path: '/partners', label: 'Партнёрам' },
+    { path: '/about', label: 'О компании' },
+  ]
+
+  const isActive = (path: string) => {
+    if (path === '/') {
+      return location.pathname === '/'
+    }
+    return location.pathname.startsWith(path)
+  }
+
+  return (
+    <>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200 dark:bg-gray-900/80 dark:border-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            {/* Logo */}
+            <Link to="/" className="flex items-center space-x-2">
+              <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-lg">D</span>
+              </div>
+              <span className="text-xl font-bold text-gray-900 dark:text-white">Delever</span>
+            </Link>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-1">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={cn(
+                    'px-3 py-2 rounded-md text-sm font-medium transition-colors',
+                    isActive(item.path)
+                      ? 'bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300'
+                      : 'text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
+                  )}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+
+            {/* Right side controls */}
+            <div className="flex items-center space-x-2">
+              {/* Theme Toggle */}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={toggleTheme}
+                className="hidden sm:flex"
+                aria-label="Toggle theme"
+              >
+                {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+              </Button>
+
+              {/* Language Selector */}
+              <div className="hidden sm:flex items-center space-x-1">
+                <Globe className="h-4 w-4 text-gray-500" />
+                <select
+                  value={language}
+                  onChange={(e) => setLanguage(e.target.value as 'ru' | 'en' | 'uz')}
+                  className="bg-transparent border-none text-sm focus:outline-none cursor-pointer"
+                >
+                  <option value="ru">RU</option>
+                  <option value="en">EN</option>
+                  <option value="uz">UZ</option>
+                </select>
+              </div>
+
+              {/* Region Selector */}
+              <div className="hidden md:flex items-center space-x-1">
+                <MapPin className="h-4 w-4 text-gray-500" />
+                <select
+                  value={region}
+                  onChange={(e) => setRegion(e.target.value as 'uz' | 'kz' | 'ru' | 'ae')}
+                  className="bg-transparent border-none text-sm focus:outline-none cursor-pointer"
+                >
+                  <option value="uz">UZ</option>
+                  <option value="kz">KZ</option>
+                  <option value="ru">RU</option>
+                  <option value="ae">AE</option>
+                </select>
+              </div>
+
+              {/* CTA Buttons */}
+              <div className="hidden md:flex items-center space-x-2">
+                <Button variant="outline" size="sm" onClick={() => setContactFormOpen(true)}>
+                  Демо
+                </Button>
+                <Button size="sm" onClick={() => window.open('https://app.delever.io', '_blank')}>
+                  Войти
+                </Button>
+              </div>
+
+              {/* Mobile Menu Button */}
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="lg:hidden"
+                aria-label="Toggle menu"
+              >
+                {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+              </Button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="lg:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
+            <nav className="container mx-auto px-4 py-4 space-y-2">
+              {navItems.map((item) => (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={cn(
+                    'block px-3 py-2 rounded-md text-base font-medium',
+                    isActive(item.path)
+                      ? 'bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300'
+                      : 'text-gray-700 dark:text-gray-300'
+                  )}
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <div className="pt-4 space-y-2 border-t border-gray-200 dark:border-gray-800 mt-4">
+                <Button
+                  variant="outline"
+                  className="w-full"
+                  onClick={() => {
+                    setContactFormOpen(true)
+                    setMobileMenuOpen(false)
+                  }}
+                >
+                  Получить демо
+                </Button>
+                <Button
+                  className="w-full"
+                  onClick={() => window.open('https://app.delever.io', '_blank')}
+                >
+                  Войти в систему
+                </Button>
+              </div>
+            </nav>
+          </div>
+        )}
+      </header>
+
+      <ContactForm open={contactFormOpen} onOpenChange={setContactFormOpen} />
+    </>
+  )
+}
+
