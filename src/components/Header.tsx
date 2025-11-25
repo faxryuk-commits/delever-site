@@ -1,9 +1,7 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, Moon, Sun, Globe, MapPin } from 'lucide-react'
+import { Menu, X, Moon, Sun } from 'lucide-react'
 import { useTheme } from '@/contexts/ThemeContext'
-import { useLanguage } from '@/contexts/LanguageContext'
-import { useRegion } from '@/contexts/RegionContext'
 import { Button } from './ui/Button'
 import { ContactForm } from './ContactForm'
 import { Logo } from './Logo'
@@ -13,8 +11,6 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [contactFormOpen, setContactFormOpen] = useState(false)
   const { theme, toggleTheme } = useTheme()
-  const { language, setLanguage } = useLanguage()
-  const { region, setRegion } = useRegion()
   const location = useLocation()
 
   const navItems = [
@@ -75,35 +71,6 @@ export function Header() {
               >
                 {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
               </Button>
-
-              {/* Language Selector */}
-              <div className="hidden sm:flex items-center space-x-1">
-                <Globe className="h-4 w-4 text-brand-darkBlue/60" />
-                <select
-                  value={language}
-                  onChange={(e) => setLanguage(e.target.value as 'ru' | 'en' | 'uz')}
-                  className="bg-transparent border-none text-sm focus:outline-none cursor-pointer"
-                >
-                  <option value="ru">RU</option>
-                  <option value="en">EN</option>
-                  <option value="uz">UZ</option>
-                </select>
-              </div>
-
-              {/* Region Selector */}
-              <div className="hidden md:flex items-center space-x-1">
-                <MapPin className="h-4 w-4 text-brand-darkBlue/60" />
-                <select
-                  value={region}
-                  onChange={(e) => setRegion(e.target.value as 'uz' | 'kz' | 'ru' | 'ae')}
-                  className="bg-transparent border-none text-sm focus:outline-none cursor-pointer"
-                >
-                  <option value="uz">UZ</option>
-                  <option value="kz">KZ</option>
-                  <option value="ru">RU</option>
-                  <option value="ae">AE</option>
-                </select>
-              </div>
 
               {/* CTA Buttons */}
               <div className="hidden md:flex items-center space-x-2">
