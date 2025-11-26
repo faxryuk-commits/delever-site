@@ -118,10 +118,10 @@ export function About() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-darkBlue text-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-dark text-white">
           <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-4xl font-bold mb-4">Готовы начать работать с нами?</h2>
-            <p className="text-xl text-white/90 mb-8">
+            <h2 className="text-4xl font-bold mb-4 text-white tracking-tight">Готовы начать работать с нами?</h2>
+            <p className="text-xl text-white/90 mb-8 font-light">
               Свяжитесь с нами и узнайте, как Delever поможет увеличить прибыль и упростить операции вашего ресторана
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

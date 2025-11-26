@@ -113,10 +113,10 @@ export function Marketing() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-600 text-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-dark text-white">
           <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-4xl font-bold mb-4">Готовы автоматизировать маркетинг?</h2>
-            <p className="text-xl text-primary-100 mb-8">
+            <h2 className="text-4xl font-bold mb-4 text-white tracking-tight">Готовы автоматизировать маркетинг?</h2>
+            <p className="text-xl text-white/90 mb-8 font-light">
               Запустите маркетинг с Delever и начните расти быстрее
             </p>
             <Button size="lg" variant="secondary" onClick={() => setContactFormOpen(true)}>

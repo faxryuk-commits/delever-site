@@ -10,10 +10,10 @@ export function CallToAction() {
     <>
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-dark text-white">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-white">
             Готовы начать?
           </h2>
-          <p className="text-xl mb-8 text-white/85 font-light">
+          <p className="text-xl mb-8 text-white/90 font-light">
             Запустите собственную доставку за неделю. Получите демо и посмотрите, как Delever поможет увеличить прибыль и упростить операции
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -104,7 +104,7 @@ export function Operations() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-4xl font-bold text-brand-darkBlue mb-4 tracking-tight">
                 Результаты наших клиентов
               </h2>
             </div>
@@ -112,13 +112,13 @@ export function Operations() {
               {stats.map((stat, idx) => (
                 <div
                   key={idx}
-                  className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700"
+                  className="bg-white rounded-xl p-6 text-center border border-brand-lightTeal/20 shadow-soft"
                 >
                   <div className="text-brand-darkBlue mb-4 flex justify-center">{stat.icon}</div>
-                  <div className="text-4xl font-bold text-brand-darkBlue mb-2">
+                  <div className="text-4xl font-bold text-brand-darkBlue mb-2 tracking-tight">
                     {stat.value}
                   </div>
-                  <div className="text-lg text-brand-darkBlue/80">{stat.label}</div>
+                  <div className="text-lg text-brand-darkBlue/70 font-medium">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -126,10 +126,10 @@ export function Operations() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-600 text-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-dark text-white">
           <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-4xl font-bold mb-4">Готовы оптимизировать операции?</h2>
-            <p className="text-xl text-primary-100 mb-8">
+            <h2 className="text-4xl font-bold mb-4 text-white tracking-tight">Готовы оптимизировать операции?</h2>
+            <p className="text-xl text-white/90 mb-8 font-light">
               Свяжитесь с нами и узнайте, как Delever может помочь вашему бизнесу
             </p>
             <Button size="lg" variant="secondary" onClick={() => setContactFormOpen(true)}>

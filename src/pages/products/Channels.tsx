@@ -93,10 +93,10 @@ export function Channels() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-darkBlue text-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-dark text-white">
           <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-4xl font-bold mb-4">Готовы запустить свои каналы продаж?</h2>
-            <p className="text-xl text-white/90 mb-8">
+            <h2 className="text-4xl font-bold mb-4 text-white tracking-tight">Готовы запустить свои каналы продаж?</h2>
+            <p className="text-xl text-white/90 mb-8 font-light">
               Свяжитесь с нами и получите демо-версию
             </p>
             <Button size="lg" variant="secondary" onClick={() => setContactFormOpen(true)}>

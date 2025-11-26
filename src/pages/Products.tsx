@@ -238,9 +238,9 @@ export function Products() {
 
         {/* CTA */}
         <section className="container mx-auto max-w-4xl">
-          <div className="bg-brand-darkBlue rounded-2xl p-12 text-center text-white">
-            <h2 className="text-4xl font-bold mb-4">Готовы начать?</h2>
-            <p className="text-xl text-white/90 mb-8">
+          <div className="bg-gradient-dark rounded-2xl p-12 text-center text-white">
+            <h2 className="text-4xl font-bold mb-4 text-white tracking-tight">Готовы начать?</h2>
+            <p className="text-xl text-white/90 mb-8 font-light">
               Запустите собственную доставку за неделю. Получите демо и посмотрите, как Delever поможет увеличить прибыль
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
