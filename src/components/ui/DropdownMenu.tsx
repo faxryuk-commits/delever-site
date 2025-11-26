@@ -5,8 +5,6 @@ import { cn } from '@/lib/utils'
 
 const DropdownMenu = DropdownMenuPrimitive.Root
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger
-const DropdownMenuContent = DropdownMenuPrimitive.Content
-const DropdownMenuItem = DropdownMenuPrimitive.Item
 
 const DropdownMenuContentWrapper = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.Content>,
