@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
+import { PageNavigation } from '@/components/PageNavigation'
 import { AggregatorIntegration } from '@/components/home/AggregatorIntegration'
 import { ArrowRight, Code, Shield, HeadphonesIcon } from 'lucide-react'
 
@@ -137,6 +138,7 @@ export function Integrations() {
         </section>
       </div>
 
+      <PageNavigation />
       <ContactForm open={contactFormOpen} onOpenChange={setContactFormOpen} />
     </>
   )

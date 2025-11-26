@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
 import { FeaturesShowcase } from '@/components/home/FeaturesShowcase'
 import { ChannelDetails } from '@/components/channels/ChannelDetails'
+import { PageNavigation } from '@/components/PageNavigation'
 import { CheckCircle, ArrowRight, Calendar, Palette, Code, Rocket } from 'lucide-react'
 
 export function Channels() {
@@ -106,6 +107,7 @@ export function Channels() {
         </section>
       </div>
 
+      <PageNavigation />
       <ContactForm open={contactFormOpen} onOpenChange={setContactFormOpen} />
     </>
   )

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
+import { PageNavigation } from '@/components/PageNavigation'
 import { Globe, TrendingUp, Users, Target, ArrowRight } from 'lucide-react'
 
 export function About() {
@@ -140,6 +141,7 @@ export function About() {
         </section>
       </div>
 
+      <PageNavigation />
       <ContactForm open={contactFormOpen} onOpenChange={setContactFormOpen} />
     </>
   )

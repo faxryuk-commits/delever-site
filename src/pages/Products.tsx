@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
+import { PageNavigation } from '@/components/PageNavigation'
 import { ProcessFlow } from '@/components/home/ProcessFlow'
 import { 
   ShoppingCart, 
@@ -260,6 +261,7 @@ export function Products() {
         </section>
       </div>
 
+      <PageNavigation />
       <ContactForm open={contactFormOpen} onOpenChange={setContactFormOpen} />
     </>
   )

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
+import { PageNavigation } from '@/components/PageNavigation'
 import { Check, ArrowRight, Percent, CreditCard, Gift } from 'lucide-react'
 
 const plans = [
@@ -382,6 +383,7 @@ export function Pricing() {
         </section>
       </div>
 
+      <PageNavigation />
       <ContactForm open={contactFormOpen} onOpenChange={setContactFormOpen} />
     </>
   )

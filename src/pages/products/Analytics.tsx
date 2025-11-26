@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
+import { PageNavigation } from '@/components/PageNavigation'
 import { BarChart3, TrendingUp, Package, Users, Brain, ArrowRight } from 'lucide-react'
 
 export function Analytics() {
@@ -146,6 +147,7 @@ export function Analytics() {
         </section>
       </div>
 
+      <PageNavigation />
       <ContactForm open={contactFormOpen} onOpenChange={setContactFormOpen} />
     </>
   )
