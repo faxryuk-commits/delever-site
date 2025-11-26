@@ -1,17 +1,9 @@
 import { 
   ShoppingCart, 
-  Bot, 
-  Globe, 
-  Smartphone, 
-  QrCode, 
-  Phone,
   Zap,
   Monitor,
   Truck,
   BarChart3,
-  TrendingUp,
-  Users,
-  CreditCard,
   Package
 } from 'lucide-react'
 
