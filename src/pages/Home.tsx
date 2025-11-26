@@ -1,6 +1,4 @@
 import { Hero } from '@/components/home/Hero'
-import { ProblemSolution } from '@/components/home/ProblemSolution'
-import { TargetAudience } from '@/components/home/TargetAudience'
 import { FeaturesShowcase } from '@/components/home/FeaturesShowcase'
 import { ProductOverview } from '@/components/home/ProductOverview'
 import { AggregatorIntegration } from '@/components/home/AggregatorIntegration'
