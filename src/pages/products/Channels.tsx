@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
 import { FeaturesShowcase } from '@/components/home/FeaturesShowcase'
+import { ChannelDetails } from '@/components/channels/ChannelDetails'
 import { CheckCircle, ArrowRight, Calendar, Palette, Code, Rocket } from 'lucide-react'
 
 export function Channels() {
@@ -36,6 +37,9 @@ export function Channels() {
 
         {/* Features */}
         <FeaturesShowcase />
+
+        {/* Channel Details */}
+        <ChannelDetails />
 
         {/* Work Together */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBeige">
@@ -88,10 +92,10 @@ export function Channels() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-600 text-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-darkBlue text-white">
           <div className="container mx-auto max-w-4xl text-center">
             <h2 className="text-4xl font-bold mb-4">Готовы запустить свои каналы продаж?</h2>
-            <p className="text-xl text-primary-100 mb-8">
+            <p className="text-xl text-white/90 mb-8">
               Свяжитесь с нами и получите демо-версию
             </p>
             <Button size="lg" variant="secondary" onClick={() => setContactFormOpen(true)}>
