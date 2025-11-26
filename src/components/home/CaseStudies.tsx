@@ -1,5 +1,6 @@
 import React from 'react'
 import { TrendingUp, Clock, DollarSign, Users } from 'lucide-react'
+import { FadeInOnScroll } from '../ui/FadeInOnScroll'
 
 interface CaseStudy {
   company: string
@@ -49,21 +50,21 @@ export function CaseStudies() {
   return (
     <section id="cases" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-subtle">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
-            Результаты наших клиентов
-          </h2>
-          <p className="text-xl text-brand-darkBlue/70 max-w-2xl mx-auto font-light">
-            Реальные цифры роста после внедрения Delever
-          </p>
-        </div>
+        <FadeInOnScroll>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
+              Результаты наших клиентов
+            </h2>
+            <p className="text-xl text-brand-darkBlue/70 max-w-2xl mx-auto font-light">
+              Реальные цифры роста после внедрения Delever
+            </p>
+          </div>
+        </FadeInOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {cases.map((caseStudy, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20 flex flex-col h-full"
-            >
+            <FadeInOnScroll key={idx} delay={idx * 0.15}>
+              <div className="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20 flex flex-col h-full">
               <div className="mb-6">
                 <h3 className="text-2xl font-bold text-brand-darkBlue tracking-tight">
                   {caseStudy.company}
@@ -92,7 +93,8 @@ export function CaseStudies() {
                   {caseStudy.highlight}
                 </p>
               </div>
-            </div>
+              </div>
+            </FadeInOnScroll>
           ))}
         </div>
       </div>

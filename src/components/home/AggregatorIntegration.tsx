@@ -1,4 +1,5 @@
 import { CheckCircle, Zap, Globe, Clock, Tablet } from 'lucide-react'
+import { FadeInOnScroll } from '../ui/FadeInOnScroll'
 
 const aggregators = ['Wolt', 'Yandex Eats', 'Talabat', 'Deliveroo', 'Noon', 'Uzum Tezkor']
 
@@ -21,18 +22,21 @@ export function AggregatorIntegration() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-subtle">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
-            Все агрегаторы в одном окне
-          </h2>
-          <p className="text-xl text-brand-darkBlue/70 max-w-2xl mx-auto font-light">
-            Забудьте про несколько планшетов на кухне. Все заказы из агрегаторов приходят в единую систему Delever
-          </p>
-        </div>
+        <FadeInOnScroll>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
+              Все агрегаторы в одном окне
+            </h2>
+            <p className="text-xl text-brand-darkBlue/70 max-w-2xl mx-auto font-light">
+              Забудьте про несколько планшетов на кухне. Все заказы из агрегаторов приходят в единую систему Delever
+            </p>
+          </div>
+        </FadeInOnScroll>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left Column */}
-          <div>
+          <FadeInOnScroll delay={0.2} direction="left">
+            <div>
             <div className="bg-white rounded-2xl p-8 shadow-soft border border-brand-lightTeal/20 mb-6">
               <h3 className="text-2xl font-semibold text-brand-darkBlue mb-5 tracking-tight">
                 Как это работает
@@ -54,10 +58,12 @@ export function AggregatorIntegration() {
                 Больше никаких планшетов на кухне — все заказы в одном интерфейсе
               </p>
             </div>
-          </div>
+            </div>
+          </FadeInOnScroll>
 
           {/* Right Column */}
-          <div>
+          <FadeInOnScroll delay={0.3} direction="right">
+            <div>
             {/* Aggregator Badges */}
             <div className="mb-8">
               <h3 className="text-xl font-semibold text-brand-darkBlue mb-4">
@@ -90,7 +96,8 @@ export function AggregatorIntegration() {
                 </div>
               ))}
             </div>
-          </div>
+            </div>
+          </FadeInOnScroll>
         </div>
       </div>
     </section>

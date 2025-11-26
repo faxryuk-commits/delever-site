@@ -1,4 +1,5 @@
 import { XCircle, CheckCircle } from 'lucide-react'
+import { FadeInOnScroll } from '../ui/FadeInOnScroll'
 
 const problems = [
   'Потеря заказов из-за ошибок при ручном вводе',
@@ -20,18 +21,21 @@ export function ProblemSolution() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
-            От хаоса к порядку
-          </h2>
-          <p className="text-xl text-brand-darkBlue/70 max-w-2xl mx-auto font-light">
-            Превратите множество систем, планшетов и ручной работы в единую автоматизированную платформу
-          </p>
-        </div>
+        <FadeInOnScroll>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
+              От хаоса к порядку
+            </h2>
+            <p className="text-xl text-brand-darkBlue/70 max-w-2xl mx-auto font-light">
+              Превратите множество систем, планшетов и ручной работы в единую автоматизированную платформу
+            </p>
+          </div>
+        </FadeInOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Problems */}
-          <div className="bg-white rounded-2xl p-8 border border-red-100 shadow-soft">
+          <FadeInOnScroll delay={0.2} direction="left">
+            <div className="bg-white rounded-2xl p-8 border border-red-100 shadow-soft">
             <h3 className="text-2xl font-semibold text-brand-darkBlue mb-6 tracking-tight">
               Проблемы без Delever
             </h3>
@@ -43,10 +47,12 @@ export function ProblemSolution() {
                 </li>
               ))}
             </ul>
-          </div>
+            </div>
+          </FadeInOnScroll>
 
           {/* Solutions */}
-          <div className="bg-gradient-accent rounded-2xl p-8 border border-brand-lightTeal/30 shadow-soft">
+          <FadeInOnScroll delay={0.3} direction="right">
+            <div className="bg-gradient-accent rounded-2xl p-8 border border-brand-lightTeal/30 shadow-soft">
             <h3 className="text-2xl font-semibold text-brand-darkBlue mb-6 tracking-tight">
               Как Delever решает
             </h3>
@@ -58,7 +64,8 @@ export function ProblemSolution() {
                 </li>
               ))}
             </ul>
-          </div>
+            </div>
+          </FadeInOnScroll>
         </div>
       </div>
     </section>

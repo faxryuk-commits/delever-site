@@ -1,4 +1,5 @@
 import { Utensils, Coffee, Building2, Store, Users } from 'lucide-react'
+import { FadeInOnScroll } from '../ui/FadeInOnScroll'
 
 const audiences = [
   {
@@ -37,21 +38,21 @@ export function TargetAudience() {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
-            Для кого Delever
-          </h2>
-          <p className="text-xl text-brand-darkBlue/70 max-w-2xl mx-auto font-light">
-            Решение для всех типов заведений общественного питания
-          </p>
-        </div>
+        <FadeInOnScroll>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
+              Для кого Delever
+            </h2>
+            <p className="text-xl text-brand-darkBlue/70 max-w-2xl mx-auto font-light">
+              Решение для всех типов заведений общественного питания
+            </p>
+          </div>
+        </FadeInOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {audiences.map((audience, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20 flex flex-col h-full"
-            >
+            <FadeInOnScroll key={idx} delay={idx * 0.1}>
+              <div className="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20 flex flex-col h-full">
               <div className="text-brand-darkBlue mb-5">{audience.icon}</div>
               <h3 className="text-xl font-semibold text-brand-darkBlue mb-4 tracking-tight">
                 {audience.title}
@@ -68,7 +69,8 @@ export function TargetAudience() {
                   <p className="text-sm text-brand-darkBlue/65 leading-relaxed">{audience.benefit}</p>
                 </div>
               </div>
-            </div>
+              </div>
+            </FadeInOnScroll>
           ))}
         </div>
       </div>
