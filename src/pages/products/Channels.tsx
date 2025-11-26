@@ -49,9 +49,9 @@ export function Channels() {
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
                 {['Единый каталог', 'Общие акции', 'Клиентский профиль'].map((feature, idx) => (
-                  <div key={idx} className="bg-white dark:bg-gray-800 rounded-lg p-6">
-                    <CheckCircle className="h-8 w-8 text-primary-600 mx-auto mb-3" />
-                    <h3 className="font-semibold text-gray-900 dark:text-white">{feature}</h3>
+                  <div key={idx} className="bg-white rounded-lg p-6 border-2 border-brand-lightTeal/30">
+                    <CheckCircle className="h-8 w-8 text-brand-darkBlue mx-auto mb-3" />
+                    <h3 className="font-semibold text-brand-darkBlue">{feature}</h3>
                   </div>
                 ))}
               </div>
@@ -73,14 +73,14 @@ export function Channels() {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
               {steps.map((step, idx) => (
                 <div key={idx} className="text-center">
-                  <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900/20 rounded-full mx-auto mb-4 flex items-center justify-center text-primary-600">
+                  <div className="w-16 h-16 bg-brand-lightBlue rounded-full mx-auto mb-4 flex items-center justify-center text-brand-darkBlue">
                     {step.icon}
                   </div>
-                  <div className="text-sm font-medium text-primary-600 mb-2">Шаг {idx + 1}</div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  <div className="text-sm font-medium text-brand-darkBlue mb-2">Шаг {idx + 1}</div>
+                  <h3 className="text-lg font-semibold text-brand-darkBlue mb-2">
                     {step.title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">{step.description}</p>
+                  <p className="text-sm text-brand-darkBlue/80">{step.description}</p>
                 </div>
               ))}
             </div>

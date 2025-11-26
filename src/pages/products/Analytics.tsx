@@ -61,13 +61,13 @@ export function Analytics() {
               {features.map((feature, idx) => (
                 <div
                   key={idx}
-                  className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700"
+                  className="bg-white rounded-xl p-6 shadow-sm border-2 border-brand-lightTeal/30"
                 >
-                  <div className="text-primary-600 mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  <div className="text-brand-darkBlue mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-brand-darkBlue mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
+                  <p className="text-brand-darkBlue/80">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -75,25 +75,25 @@ export function Analytics() {
         </section>
 
         {/* Dashboard Preview */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBlue">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-4xl font-bold text-brand-darkBlue mb-4">
                 Примеры дашбордов
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300">
+              <p className="text-xl text-brand-darkBlue/80">
                 Визуализация данных для быстрого принятия решений
               </p>
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
+            <div className="bg-white rounded-xl p-8 border-2 border-brand-lightTeal/30">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {['Выручка', 'Заказы', 'Средний чек'].map((metric, idx) => (
                   <div key={idx} className="text-center">
-                    <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                    <div className="text-3xl font-bold text-brand-darkBlue mb-2">
                       {metric}
                     </div>
-                    <div className="h-32 bg-gray-100 dark:bg-gray-700 rounded-lg flex items-center justify-center">
-                      <span className="text-gray-400">График</span>
+                    <div className="h-32 bg-brand-lightBeige rounded-lg flex items-center justify-center">
+                      <span className="text-brand-darkBlue/40">График</span>
                     </div>
                   </div>
                 ))}
@@ -106,27 +106,25 @@ export function Analytics() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-4xl font-bold text-brand-darkBlue mb-4">
                 Как аналитика помогла нашим клиентам
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+              <div className="bg-white rounded-xl p-6 border-2 border-brand-lightTeal/30">
+                <h3 className="text-xl font-semibold text-brand-darkBlue mb-3">
                   Оптимизация меню
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Благодаря ABC-XYZ анализу клиент выявил непопулярные позиции и оптимизировал
-                  меню, что привело к росту среднего чека на 15%.
+                <p className="text-brand-darkBlue/80">
+                  Благодаря ABC-XYZ анализу клиент выявил непопулярные позиции и оптимизировал меню, что привело к росту среднего чека на 15%.
                 </p>
               </div>
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+              <div className="bg-white rounded-xl p-6 border-2 border-brand-lightTeal/30">
+                <h3 className="text-xl font-semibold text-brand-darkBlue mb-3">
                   Прогнозирование спроса
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  AI-прогнозы помогли клиенту снизить потери продуктов на 20% и оптимизировать
-                  закупки.
+                <p className="text-brand-darkBlue/80">
+                  AI-прогнозы помогли клиенту снизить потери продуктов на 20% и оптимизировать закупки.
                 </p>
               </div>
             </div>
@@ -134,10 +132,10 @@ export function Analytics() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-600 text-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-darkBlue text-white">
           <div className="container mx-auto max-w-4xl text-center">
             <h2 className="text-4xl font-bold mb-4">Готовы начать управлять на основе данных?</h2>
-            <p className="text-xl text-primary-100 mb-8">
+            <p className="text-xl text-white/90 mb-8">
               Подключите аналитику Delever и получите полный контроль над бизнесом
             </p>
             <Button size="lg" variant="secondary" onClick={() => setContactFormOpen(true)}>

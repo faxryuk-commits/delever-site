@@ -71,13 +71,13 @@ export function Marketing() {
               {features.map((feature, idx) => (
                 <div
                   key={idx}
-                  className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700"
+                  className="bg-white rounded-xl p-6 shadow-sm border-2 border-brand-lightTeal/30"
                 >
-                  <div className="text-primary-600 mb-4">{feature.icon}</div>
-                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">
+                  <div className="text-brand-darkBlue mb-4">{feature.icon}</div>
+                  <h3 className="text-2xl font-semibold text-brand-darkBlue mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
+                  <p className="text-brand-darkBlue/80">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -85,13 +85,13 @@ export function Marketing() {
         </section>
 
         {/* Scenarios */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBeige">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-4xl font-bold text-brand-darkBlue mb-4">
                 Примеры сценариев
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300">
+              <p className="text-xl text-brand-darkBlue/80">
                 Готовые решения для типичных маркетинговых задач
               </p>
             </div>
@@ -99,12 +99,12 @@ export function Marketing() {
               {scenarios.map((scenario, idx) => (
                 <div
                   key={idx}
-                  className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700"
+                  className="bg-white rounded-xl p-6 border-2 border-brand-lightTeal/30"
                 >
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  <h3 className="text-xl font-semibold text-brand-darkBlue mb-3">
                     {scenario.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300">{scenario.description}</p>
+                  <p className="text-brand-darkBlue/80">{scenario.description}</p>
                 </div>
               ))}
             </div>

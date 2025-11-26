@@ -4,15 +4,14 @@ import { Home, Rocket } from 'lucide-react'
 
 export function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-brand-lightBlue">
       <div className="text-center max-w-2xl">
-        <div className="text-9xl font-bold text-primary-600 mb-4">404</div>
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+        <div className="text-9xl font-bold text-brand-darkBlue mb-4">404</div>
+        <h1 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
           Страница не найдена
         </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-          К сожалению, запрашиваемая страница не существует. Возможно, она была перемещена или
-          удалена.
+        <p className="text-xl text-brand-darkBlue/80 mb-8">
+          К сожалению, запрашиваемая страница не существует. Возможно, она была перемещена или удалена.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link to="/">

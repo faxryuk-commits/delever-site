@@ -62,13 +62,13 @@ export function Operations() {
               {features.map((feature, idx) => (
                 <div
                   key={idx}
-                  className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700"
+                  className="bg-white rounded-xl p-6 shadow-sm border-2 border-brand-lightTeal/30"
                 >
-                  <div className="text-primary-600 mb-4">{feature.icon}</div>
-                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">
+                  <div className="text-brand-darkBlue mb-4">{feature.icon}</div>
+                  <h3 className="text-2xl font-semibold text-brand-darkBlue mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
+                  <p className="text-brand-darkBlue/80">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -76,13 +76,13 @@ export function Operations() {
         </section>
 
         {/* Integrations */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBeige">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              <h2 className="text-4xl font-bold text-brand-darkBlue mb-4">
                 Интеграции с POS и кухней
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300">
+              <p className="text-xl text-brand-darkBlue/80">
                 Автоматическая передача заказов в кассу и на кухню
               </p>
             </div>
@@ -90,7 +90,7 @@ export function Operations() {
               {['iiko', 'R-Keeper', 'Syrve', 'Poster', 'Paloma'].map((pos, idx) => (
                 <div
                   key={idx}
-                  className="bg-white dark:bg-gray-800 px-6 py-3 rounded-lg border border-gray-200 dark:border-gray-700 text-sm font-medium"
+                  className="bg-white px-6 py-3 rounded-lg border-2 border-brand-lightTeal/30 text-sm font-medium text-brand-darkBlue hover:border-brand-darkBlue transition-all"
                 >
                   {pos}
                 </div>
@@ -113,11 +113,11 @@ export function Operations() {
                   key={idx}
                   className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700"
                 >
-                  <div className="text-primary-600 mb-4 flex justify-center">{stat.icon}</div>
-                  <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">
+                  <div className="text-brand-darkBlue mb-4 flex justify-center">{stat.icon}</div>
+                  <div className="text-4xl font-bold text-brand-darkBlue mb-2">
                     {stat.value}
                   </div>
-                  <div className="text-lg text-gray-600 dark:text-gray-300">{stat.label}</div>
+                  <div className="text-lg text-brand-darkBlue/80">{stat.label}</div>
                 </div>
               ))}
             </div>

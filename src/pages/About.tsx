@@ -65,27 +65,27 @@ export function About() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <Globe className="h-12 w-12 text-primary-600 mx-auto mb-4" />
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              <Globe className="h-12 w-12 text-brand-darkBlue mx-auto mb-4" />
+              <h2 className="text-4xl font-bold text-brand-darkBlue mb-4">
                 География и масштабы
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary-600 mb-2">5</div>
-                <div className="text-gray-600 dark:text-gray-300">Стран</div>
+                <div className="text-4xl font-bold text-brand-darkBlue mb-2">5</div>
+                <div className="text-brand-darkBlue/80">Стран</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary-600 mb-2">500+</div>
-                <div className="text-gray-600 dark:text-gray-300">Заведений</div>
+                <div className="text-4xl font-bold text-brand-darkBlue mb-2">500+</div>
+                <div className="text-brand-darkBlue/80">Заведений</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary-600 mb-2">1M+</div>
-                <div className="text-gray-600 dark:text-gray-300">Заказов</div>
+                <div className="text-4xl font-bold text-brand-darkBlue mb-2">1M+</div>
+                <div className="text-brand-darkBlue/80">Заказов</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-primary-600 mb-2">50+</div>
-                <div className="text-gray-600 dark:text-gray-300">Партнёров</div>
+                <div className="text-4xl font-bold text-brand-darkBlue mb-2">50+</div>
+                <div className="text-brand-darkBlue/80">Партнёров</div>
               </div>
             </div>
           </div>
