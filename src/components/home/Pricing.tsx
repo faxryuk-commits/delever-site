@@ -70,9 +70,9 @@ const plans = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBeige">
+    <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
             Тарифы Delever
           </h2>
@@ -85,35 +85,44 @@ export function Pricing() {
           {plans.map((plan, idx) => (
             <div
               key={idx}
-              className={`bg-white rounded-xl p-6 shadow-sm border-2 ${
+              className={`bg-white rounded-xl p-6 shadow-lg border-2 relative ${
                 plan.highlight
-                  ? 'border-brand-darkBlue'
+                  ? 'border-brand-darkBlue scale-105'
                   : 'border-brand-lightTeal/30'
-              }`}
+              } transition-transform hover:shadow-xl`}
             >
               {plan.highlight && (
-                <div className="bg-brand-darkBlue text-white text-xs font-semibold px-2 py-1 rounded-full inline-block mb-4">
-                  Популярный
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <div className="bg-brand-darkBlue text-white text-xs font-semibold px-3 py-1 rounded-full">
+                    Популярный
+                  </div>
                 </div>
               )}
-              <h3 className="text-2xl font-bold text-brand-darkBlue mb-2">
-                {plan.name}
-              </h3>
-              <div className="mb-4">
-                <span className="text-3xl font-bold text-brand-darkBlue">
-                  {plan.price}
-                </span>
-                <span className="text-brand-darkBlue/60">{plan.period}</span>
+              
+              <div className="mb-6">
+                <h3 className="text-2xl font-bold text-brand-darkBlue mb-3">
+                  {plan.name}
+                </h3>
+                <div className="mb-3">
+                  <span className="text-3xl font-bold text-brand-darkBlue">
+                    {plan.price}
+                  </span>
+                  {plan.period && (
+                    <span className="text-brand-darkBlue/60 text-lg ml-1">{plan.period}</span>
+                  )}
+                </div>
+                <p className="text-sm text-brand-darkBlue/70">{plan.description}</p>
               </div>
-              <p className="text-sm text-brand-darkBlue/70 mb-6">{plan.description}</p>
-              <ul className="space-y-3 mb-6">
+
+              <ul className="space-y-3 mb-8 min-h-[200px]">
                 {plan.features.map((feature, fIdx) => (
                   <li key={fIdx} className="flex items-start space-x-2">
                     <Check className="h-5 w-5 text-brand-darkBlue mt-0.5 flex-shrink-0" />
-                    <span className="text-sm text-brand-darkBlue/80">{feature}</span>
+                    <span className="text-sm text-brand-darkBlue/80 leading-relaxed">{feature}</span>
                   </li>
                 ))}
               </ul>
+
               <Button
                 className="w-full"
                 variant={plan.highlight ? 'primary' : 'outline'}
