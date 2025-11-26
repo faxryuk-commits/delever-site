@@ -5,9 +5,10 @@ interface AnimatedCounterProps {
   suffix?: string
   prefix?: string
   duration?: number
+  format?: 'M' | 'K' | 'number'
 }
 
-function AnimatedCounter({ value, suffix = '', prefix = '', duration = 2000 }: AnimatedCounterProps) {
+function AnimatedCounter({ value, suffix = '', prefix = '', duration = 2000, format = 'number' }: AnimatedCounterProps) {
   const [count, setCount] = useState(0)
   const [hasAnimated, setHasAnimated] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
@@ -52,21 +53,32 @@ function AnimatedCounter({ value, suffix = '', prefix = '', duration = 2000 }: A
     return () => observer.disconnect()
   }, [hasAnimated, value, duration])
 
+  const formatNumber = (num: number) => {
+    if (format === 'M') {
+      return (num / 1000000).toFixed(0)
+    }
+    if (format === 'K') {
+      return (num / 1000).toFixed(0)
+    }
+    return num.toLocaleString()
+  }
+
   return (
     <div ref={ref} className="text-4xl md:text-5xl font-bold text-brand-darkBlue">
       {prefix}
-      {count.toLocaleString()}
+      {formatNumber(count)}
+      {format === 'M' ? 'M' : format === 'K' ? 'K' : ''}
       {suffix}
     </div>
   )
 }
 
 const stats = [
-  { value: 13000000, suffix: '+', label: 'Заказов обработано' },
-  { value: 5, suffix: '', label: 'Стран' },
-  { value: 1000, suffix: '+', label: 'Ресторанов и магазинов' },
-  { value: 40, suffix: '+', label: 'Интеграций' },
-  { value: 100, prefix: '$', suffix: 'M+', label: 'Продаж через платформу' },
+  { value: 13000000, suffix: '+', label: 'Заказов обработано', format: 'M' },
+  { value: 5, suffix: '', label: 'Стран', format: 'number' },
+  { value: 1000, suffix: '+', label: 'Ресторанов и магазинов', format: 'K' },
+  { value: 40, suffix: '+', label: 'Интеграций', format: 'number' },
+  { value: 100, prefix: '$', suffix: 'M+', label: 'Продаж через платформу', format: 'M' },
 ]
 
 export function SocialProof() {
@@ -82,7 +94,7 @@ export function SocialProof() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {stats.map((stat, idx) => (
             <div key={idx} className="text-center">
-              <AnimatedCounter value={stat.value} suffix={stat.suffix} prefix={stat.prefix || ''} />
+              <AnimatedCounter value={stat.value} suffix={stat.suffix} prefix={stat.prefix || ''} format={stat.format || 'number'} />
               <p className="text-lg text-brand-darkBlue/70 mt-2">{stat.label}</p>
             </div>
           ))}
