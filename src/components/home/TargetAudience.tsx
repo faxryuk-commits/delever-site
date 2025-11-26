@@ -50,13 +50,13 @@ export function TargetAudience() {
           {audiences.map((audience, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20"
+              className="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20 flex flex-col h-full"
             >
               <div className="text-brand-darkBlue mb-5">{audience.icon}</div>
               <h3 className="text-xl font-semibold text-brand-darkBlue mb-4 tracking-tight">
                 {audience.title}
               </h3>
-              <div className="space-y-3">
+              <div className="space-y-3 flex-grow">
                 <div>
                   <p className="text-sm font-medium text-brand-darkBlue/55 mb-1">
                     Проблема:

@@ -53,7 +53,7 @@ export function ProductOverview() {
               <Link
                 key={idx}
                 to={product.link}
-                className="group bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20 hover:border-brand-darkBlue/30"
+                className="group bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20 hover:border-brand-darkBlue/30 flex flex-col h-full"
               >
                 <div className="w-14 h-14 bg-gradient-dark rounded-xl flex items-center justify-center text-white mb-5 group-hover:scale-110 transition-transform duration-300">
                   {product.icon}
@@ -61,8 +61,8 @@ export function ProductOverview() {
                 <h3 className="text-xl font-semibold text-brand-darkBlue mb-3 tracking-tight">
                   {product.title}
                 </h3>
-                <p className="text-brand-darkBlue/65 mb-4 text-sm leading-relaxed">{product.description}</p>
-                <div className="flex items-center text-brand-darkBlue font-semibold group-hover:translate-x-1 transition-transform text-sm">
+                <p className="text-brand-darkBlue/65 mb-6 text-sm leading-relaxed flex-grow">{product.description}</p>
+                <div className="flex items-center text-brand-darkBlue font-semibold group-hover:translate-x-1 transition-transform text-sm mt-auto">
                   Узнать больше
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </div>
@@ -78,7 +78,7 @@ export function ProductOverview() {
               <Link
                 key={idx}
                 to={product.link}
-                className="group bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20 hover:border-brand-darkBlue/30"
+                className="group bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20 hover:border-brand-darkBlue/30 flex flex-col h-full"
               >
                 <div className="w-14 h-14 bg-gradient-dark rounded-xl flex items-center justify-center text-white mb-5 group-hover:scale-110 transition-transform duration-300">
                   {product.icon}
@@ -86,8 +86,8 @@ export function ProductOverview() {
                 <h3 className="text-xl font-semibold text-brand-darkBlue mb-3 tracking-tight">
                   {product.title}
                 </h3>
-                <p className="text-brand-darkBlue/65 mb-4 text-sm leading-relaxed">{product.description}</p>
-                <div className="flex items-center text-brand-darkBlue font-semibold group-hover:translate-x-1 transition-transform text-sm">
+                <p className="text-brand-darkBlue/65 mb-6 text-sm leading-relaxed flex-grow">{product.description}</p>
+                <div className="flex items-center text-brand-darkBlue font-semibold group-hover:translate-x-1 transition-transform text-sm mt-auto">
                   Узнать больше
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </div>

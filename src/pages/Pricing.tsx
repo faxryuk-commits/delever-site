@@ -172,7 +172,7 @@ export function Pricing() {
             {plans.map((plan, idx) => (
               <div
                 key={idx}
-                className={`bg-white rounded-xl p-6 shadow-lg border-2 relative ${
+                className={`bg-white rounded-xl p-6 shadow-lg border-2 relative flex flex-col h-full ${
                   plan.highlight
                     ? 'border-brand-darkBlue scale-105'
                     : 'border-brand-lightTeal/30'
@@ -187,7 +187,7 @@ export function Pricing() {
                 )}
                 
                 <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-brand-darkBlue mb-2">
+                  <h3 className="text-2xl font-bold text-brand-darkBlue mb-2 tracking-tight">
                     {plan.name}
                   </h3>
                   <div className="mb-2">
@@ -209,7 +209,7 @@ export function Pricing() {
                   <p className="text-sm text-brand-darkBlue/70">{plan.description}</p>
                 </div>
 
-                <ul className="space-y-3 mb-8 min-h-[200px]">
+                <ul className="space-y-3 mb-6 flex-grow min-h-[200px]">
                   {plan.features.map((feature, fIdx) => (
                     <li key={fIdx} className="flex items-start space-x-2">
                       <Check className="h-5 w-5 text-brand-darkBlue mt-0.5 flex-shrink-0" />
@@ -219,7 +219,7 @@ export function Pricing() {
                 </ul>
 
                 <Button
-                  className="w-full"
+                  className="w-full mt-auto"
                   variant={plan.highlight ? 'primary' : 'outline'}
                   onClick={() => setContactFormOpen(true)}
                 >

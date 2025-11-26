@@ -62,7 +62,7 @@ export function CaseStudies() {
           {cases.map((caseStudy, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20"
+              className="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20 flex flex-col h-full"
             >
               <div className="mb-6">
                 <h3 className="text-2xl font-bold text-brand-darkBlue tracking-tight">
@@ -71,7 +71,7 @@ export function CaseStudies() {
                 <p className="text-sm text-brand-darkBlue/55 mt-1">{caseStudy.location}</p>
               </div>
 
-              <div className="space-y-4 mb-6">
+              <div className="space-y-4 mb-6 flex-grow">
                 {caseStudy.results.map((result, rIdx) => (
                   <div key={rIdx} className="flex items-center space-x-3">
                     <div className="text-brand-darkBlue">{result.icon}</div>
@@ -87,7 +87,7 @@ export function CaseStudies() {
                 ))}
               </div>
 
-              <div className="bg-gradient-accent rounded-xl p-4 border border-brand-darkBlue/10">
+              <div className="bg-gradient-accent rounded-xl p-4 border border-brand-darkBlue/10 mt-auto">
                 <p className="text-sm font-semibold text-brand-darkBlue">
                   {caseStudy.highlight}
                 </p>

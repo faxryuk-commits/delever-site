@@ -112,7 +112,7 @@ export function Operations() {
               {stats.map((stat, idx) => (
                 <div
                   key={idx}
-                  className="bg-white rounded-xl p-6 text-center border border-brand-lightTeal/20 shadow-soft"
+                  className="bg-white rounded-xl p-6 text-center border border-brand-lightTeal/20 shadow-soft flex flex-col justify-center"
                 >
                   <div className="text-brand-darkBlue mb-4 flex justify-center">{stat.icon}</div>
                   <div className="text-4xl font-bold text-brand-darkBlue mb-2 tracking-tight">

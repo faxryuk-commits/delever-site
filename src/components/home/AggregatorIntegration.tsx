@@ -80,7 +80,7 @@ export function AggregatorIntegration() {
               {stats.map((stat, idx) => (
                 <div
                   key={idx}
-                  className="bg-white rounded-xl p-5 border border-brand-lightTeal/20 text-center shadow-soft hover:shadow-medium transition-all"
+                  className="bg-white rounded-xl p-5 border border-brand-lightTeal/20 text-center shadow-soft hover:shadow-medium transition-all flex flex-col justify-center"
                 >
                   <div className="text-brand-darkBlue mb-3 flex justify-center">{stat.icon}</div>
                   <div className="text-2xl font-bold text-brand-darkBlue mb-1 tracking-tight">

@@ -57,13 +57,13 @@ export function FeaturesShowcase() {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20 hover:border-brand-lightTeal/40 group"
+              className="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20 hover:border-brand-lightTeal/40 group flex flex-col h-full"
             >
               <div className="text-brand-darkBlue mb-5 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-brand-darkBlue mb-3 tracking-tight">
                 {feature.title}
               </h3>
-              <p className="text-brand-darkBlue/65 leading-relaxed">{feature.description}</p>
+              <p className="text-brand-darkBlue/65 leading-relaxed flex-grow">{feature.description}</p>
             </div>
           ))}
         </div>

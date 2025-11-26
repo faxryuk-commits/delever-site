@@ -43,13 +43,13 @@ export function AILayer() {
           {aiFeatures.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20"
+              className="bg-white rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20 flex flex-col h-full"
             >
               <div className="text-brand-darkBlue mb-4">{feature.icon}</div>
               <h3 className="text-lg font-semibold text-brand-darkBlue mb-2 tracking-tight">
                 {feature.title}
               </h3>
-              <p className="text-sm text-brand-darkBlue/65 leading-relaxed">{feature.description}</p>
+              <p className="text-sm text-brand-darkBlue/65 leading-relaxed flex-grow">{feature.description}</p>
             </div>
           ))}
         </div>
