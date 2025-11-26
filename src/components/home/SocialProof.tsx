@@ -62,10 +62,11 @@ function AnimatedCounter({ value, suffix = '', prefix = '', duration = 2000 }: A
 }
 
 const stats = [
-  { value: 1000000, suffix: '+', label: 'Заказов обработано' },
-  { value: 50, suffix: 'M+', label: 'GMV' },
-  { value: 500, suffix: '+', label: 'Заведений' },
+  { value: 13000000, suffix: '+', label: 'Заказов обработано' },
   { value: 5, suffix: '', label: 'Стран' },
+  { value: 1000, suffix: '+', label: 'Ресторанов и магазинов' },
+  { value: 40, suffix: '+', label: 'Интеграций' },
+  { value: 100, prefix: '$', suffix: 'M+', label: 'Продаж через платформу' },
 ]
 
 export function SocialProof() {
@@ -78,10 +79,10 @@ export function SocialProof() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {stats.map((stat, idx) => (
             <div key={idx} className="text-center">
-              <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+              <AnimatedCounter value={stat.value} suffix={stat.suffix} prefix={stat.prefix || ''} />
               <p className="text-lg text-brand-darkBlue/70 mt-2">{stat.label}</p>
             </div>
           ))}

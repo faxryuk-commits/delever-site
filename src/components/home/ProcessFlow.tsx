@@ -23,7 +23,7 @@ export function ProcessFlow() {
       title: 'Каналы продаж',
       icon: <ShoppingCart className="h-6 w-6" />,
       items: [
-        'Агрегаторы (Wolt, Yandex, Talabat)',
+        'Агрегаторы (Wolt, Yandex Eats, Talabat)',
         'Telegram-бот',
         'Веб-сайт',
         'Мобильное приложение',

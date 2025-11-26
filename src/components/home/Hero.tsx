@@ -31,19 +31,27 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Statistics - в стиле Deliverect */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto mb-16">
+          {/* Statistics */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto mb-16">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-2">1M+</div>
-              <div className="text-lg text-brand-darkBlue/70">Заказов обработано</div>
+              <div className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-2">13M+</div>
+              <div className="text-sm md:text-base text-brand-darkBlue/70">Заказов обработано</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-2">500+</div>
-              <div className="text-lg text-brand-darkBlue/70">Заведений</div>
+              <div className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-2">5</div>
+              <div className="text-sm md:text-base text-brand-darkBlue/70">Стран</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-2">5</div>
-              <div className="text-lg text-brand-darkBlue/70">Стран</div>
+              <div className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-2">1000+</div>
+              <div className="text-sm md:text-base text-brand-darkBlue/70">Ресторанов и магазинов</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-2">40+</div>
+              <div className="text-sm md:text-base text-brand-darkBlue/70">Интеграций</div>
+            </div>
+            <div className="text-center">
+              <div className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-2">$100M+</div>
+              <div className="text-sm md:text-base text-brand-darkBlue/70">Продаж через платформу</div>
             </div>
           </div>
 
@@ -51,7 +59,7 @@ export function Hero() {
           <div className="text-center mb-8">
             <p className="text-sm text-brand-darkBlue/60 mb-6">Интеграции с ведущими агрегаторами и POS-системами</p>
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-              {['Wolt', 'Yandex Food', 'Talabat', 'Deliveroo', 'Noon', 'Uzum Tezkor'].map(
+              {['Wolt', 'Yandex Eats', 'Talabat', 'Deliveroo', 'Noon', 'Uzum Tezkor'].map(
                 (brand) => (
                   <div key={brand} className="text-lg font-semibold text-brand-darkBlue/50">
                     {brand}

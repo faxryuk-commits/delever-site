@@ -1,6 +1,6 @@
 import { CheckCircle, Zap, Globe, Clock, Tablet } from 'lucide-react'
 
-const aggregators = ['Wolt', 'Yandex Food', 'Talabat', 'Deliveroo', 'Noon', 'Uzum Tezkor']
+const aggregators = ['Wolt', 'Yandex Eats', 'Talabat', 'Deliveroo', 'Noon', 'Uzum Tezkor']
 
 const stats = [
   { icon: <Zap className="h-6 w-6" />, value: '95%', label: 'Автоматизация' },

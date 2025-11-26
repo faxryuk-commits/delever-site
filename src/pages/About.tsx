@@ -76,11 +76,11 @@ export function About() {
                 <div className="text-brand-darkBlue/80">Стран</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-brand-darkBlue mb-2">500+</div>
-                <div className="text-brand-darkBlue/80">Заведений</div>
+                <div className="text-4xl font-bold text-brand-darkBlue mb-2">1000+</div>
+                <div className="text-brand-darkBlue/80">Ресторанов и магазинов</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-brand-darkBlue mb-2">1M+</div>
+                <div className="text-4xl font-bold text-brand-darkBlue mb-2">13M+</div>
                 <div className="text-brand-darkBlue/80">Заказов</div>
               </div>
               <div className="text-center">

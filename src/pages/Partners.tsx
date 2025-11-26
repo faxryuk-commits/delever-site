@@ -118,7 +118,7 @@ export function Partners() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
-                <div className="text-4xl font-bold text-brand-darkBlue mb-2">500+</div>
+                <div className="text-4xl font-bold text-brand-darkBlue mb-2">1000+</div>
                 <div className="text-brand-darkBlue/80">Активных клиентов</div>
               </div>
               <div className="text-center">
