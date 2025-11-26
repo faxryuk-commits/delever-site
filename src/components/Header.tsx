@@ -15,6 +15,10 @@ export function Header() {
 
   const navItems = [
     { path: '/products', label: 'Продукты' },
+    { path: '/products/channels', label: 'Каналы продаж' },
+    { path: '/products/operations', label: 'Операции' },
+    { path: '/products/analytics', label: 'Аналитика' },
+    { path: '/products/marketing', label: 'Маркетинг' },
     { path: '/integrations', label: 'Интеграции' },
     { path: '/partners', label: 'Партнёрам' },
     { path: '/about', label: 'О компании' },
@@ -22,7 +26,7 @@ export function Header() {
 
   const isActive = (path: string) => {
     if (path === '/products') {
-      return location.pathname.startsWith('/products')
+      return location.pathname === '/products'
     }
     return location.pathname === path || location.pathname.startsWith(path + '/')
   }
