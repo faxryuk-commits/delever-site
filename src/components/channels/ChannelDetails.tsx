@@ -1,7 +1,5 @@
-import { useState } from 'react'
-import { Bot, Globe, Smartphone, QrCode, Monitor, Phone, ChevronDown, TrendingUp, DollarSign, Users, Zap, CheckCircle } from 'lucide-react'
+import { Bot, Globe, Smartphone, QrCode, Monitor, Phone, TrendingUp, DollarSign, Users, Zap, CheckCircle } from 'lucide-react'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/Accordion'
-import { cn } from '@/lib/utils'
 
 interface ChannelDetail {
   id: string
