@@ -29,7 +29,7 @@ export function ProblemSolution() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Problems */}
           <div className="bg-white rounded-2xl p-8 border border-red-100 shadow-soft">
             <h3 className="text-2xl font-semibold text-brand-darkBlue mb-6 tracking-tight">

@@ -12,7 +12,7 @@ const clients = [
 
 export function Clients() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white border-y border-brand-lightTeal/10">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white border-y border-brand-lightTeal/10">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-8">
           <h2 className="text-2xl md:text-3xl font-bold text-brand-darkBlue mb-2 tracking-tight">

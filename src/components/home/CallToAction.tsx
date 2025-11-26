@@ -8,7 +8,7 @@ export function CallToAction() {
 
   return (
     <>
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-dark text-white">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-dark text-white">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 tracking-tight text-white">
             Готовы начать?
