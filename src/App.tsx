@@ -6,6 +6,7 @@ import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { Home } from './pages/Home'
 import { Products } from './pages/Products'
+import { Pricing } from './pages/Pricing'
 import { Channels } from './pages/products/Channels'
 import { Operations } from './pages/products/Operations'
 import { Analytics } from './pages/products/Analytics'
@@ -30,6 +31,7 @@ function App() {
                 <Route path="/products/operations" element={<Operations />} />
                 <Route path="/products/analytics" element={<Analytics />} />
                 <Route path="/products/marketing" element={<Marketing />} />
+                <Route path="/pricing" element={<Pricing />} />
                 <Route path="/integrations" element={<Integrations />} />
                 <Route path="/partners" element={<Partners />} />
                 <Route path="/about" element={<About />} />

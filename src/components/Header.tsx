@@ -30,6 +30,7 @@ export function Header() {
   ]
 
   const navItems = [
+    { path: '/pricing', label: 'Тарифы' },
     { path: '/partners', label: 'Партнёрам' },
     { path: '/about', label: 'О компании' },
   ]
