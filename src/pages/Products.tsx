@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
+import { ProcessFlow } from '@/components/home/ProcessFlow'
 import { 
   ShoppingCart, 
   Truck, 
@@ -141,8 +142,11 @@ export function Products() {
           </div>
         </section>
 
+        {/* Process Flow */}
+        <ProcessFlow />
+
         {/* Products Grid */}
-        <section className="container mx-auto max-w-7xl space-y-24 mb-20">
+        <section className="container mx-auto max-w-7xl space-y-24 mb-20 mt-20">
           {products.map((product, idx) => (
             <div
               key={idx}

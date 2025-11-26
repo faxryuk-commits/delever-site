@@ -1,6 +1,7 @@
 import { Hero } from '@/components/home/Hero'
 import { FeaturesShowcase } from '@/components/home/FeaturesShowcase'
 import { ProductOverview } from '@/components/home/ProductOverview'
+import { ProcessFlow } from '@/components/home/ProcessFlow'
 import { AggregatorIntegration } from '@/components/home/AggregatorIntegration'
 import { AILayer } from '@/components/home/AILayer'
 import { CaseStudies } from '@/components/home/CaseStudies'
@@ -16,6 +17,7 @@ export function Home() {
       <Hero />
       <Clients />
       <ProductOverview />
+      <ProcessFlow />
       <FeaturesShowcase />
       <AggregatorIntegration />
       <AILayer />
