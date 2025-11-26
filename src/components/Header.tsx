@@ -76,34 +76,34 @@ export function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/98 backdrop-blur-lg border-b border-brand-lightTeal/10 shadow-soft">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-brand-lightTeal/20 shadow-sm">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center">
-              <Logo height={32} />
+            <Link to="/" className="flex items-center group">
+              <Logo height={36} />
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-1">
+            <nav className="hidden lg:flex items-center gap-1">
               {/* Products Dropdown */}
               <DropdownMenu open={productsMenuOpen} onOpenChange={setProductsMenuOpen}>
                 <DropdownMenuTrigger
                   className={cn(
-                    'px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-1',
+                    'px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 flex items-center gap-1.5',
                     isProductActive()
-                      ? 'bg-brand-lightBlue text-brand-darkBlue font-semibold'
-                      : 'text-brand-darkBlue hover:bg-brand-lightTeal/30'
+                      ? 'bg-brand-lightBlue/60 text-brand-darkBlue font-semibold'
+                      : 'text-brand-darkBlue/70 hover:text-brand-darkBlue hover:bg-brand-lightBlue/40'
                   )}
                 >
                   Продукты
-                  <ChevronDown className={cn('h-4 w-4 transition-transform', productsMenuOpen && 'rotate-180')} />
+                  <ChevronDown className={cn('h-3.5 w-3.5 transition-transform duration-200', productsMenuOpen && 'rotate-180')} />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="w-[600px] p-6">
-                  <div className="grid grid-cols-4 gap-6">
+                <DropdownMenuContent align="start" className="w-[680px] p-8 mt-2 shadow-lg border border-brand-lightTeal/30">
+                  <div className="grid grid-cols-4 gap-8">
                     {productCategories.map((category, catIdx) => (
-                      <div key={catIdx} className="space-y-3">
-                        <h4 className="text-xs font-semibold text-brand-darkBlue/60 uppercase tracking-wider mb-3">
+                      <div key={catIdx} className="space-y-4">
+                        <h4 className="text-[10px] font-bold text-brand-darkBlue/50 uppercase tracking-widest mb-4">
                           {category.category}
                         </h4>
                         {category.items.map((item) => (
@@ -112,25 +112,25 @@ export function Header() {
                             to={item.path}
                             onClick={() => setProductsMenuOpen(false)}
                             className={cn(
-                              'block p-3 rounded-lg hover:bg-brand-lightBlue/50 transition-colors group',
+                              'block p-3.5 rounded-xl hover:bg-brand-lightBlue/40 transition-all duration-200 group/item',
                               isActive(item.path) && 'bg-brand-lightBlue/30'
                             )}
                           >
-                            <div className="flex items-start space-x-3">
+                            <div className="flex items-start gap-3">
                               <div className={cn(
-                                'text-brand-darkBlue mt-0.5 group-hover:scale-110 transition-transform',
+                                'text-brand-darkBlue/70 mt-0.5 group-hover/item:scale-110 group-hover/item:text-brand-darkBlue transition-all duration-200 flex-shrink-0',
                                 isActive(item.path) && 'text-brand-darkBlue'
                               )}>
                                 {item.icon}
                               </div>
                               <div className="flex-1 min-w-0">
                                 <div className={cn(
-                                  'text-sm font-semibold text-brand-darkBlue mb-1',
+                                  'text-sm font-semibold text-brand-darkBlue mb-1.5 leading-tight',
                                   isActive(item.path) && 'text-brand-darkBlue'
                                 )}>
                                   {item.label}
                                 </div>
-                                <div className="text-xs text-brand-darkBlue/60 leading-relaxed">
+                                <div className="text-xs text-brand-darkBlue/55 leading-relaxed">
                                   {item.desc}
                                 </div>
                               </div>
@@ -140,14 +140,14 @@ export function Header() {
                       </div>
                     ))}
                   </div>
-                  <div className="mt-6 pt-6 border-t border-brand-lightTeal/20">
+                  <div className="mt-8 pt-6 border-t border-brand-lightTeal/20">
                     <Link
                       to="/products"
                       onClick={() => setProductsMenuOpen(false)}
-                      className="text-sm font-semibold text-brand-darkBlue hover:text-brand-darkBlue/80 transition-colors flex items-center"
+                      className="text-sm font-semibold text-brand-darkBlue hover:text-brand-darkBlue/70 transition-colors flex items-center gap-2 group/link"
                     >
                       Все продукты
-                      <ChevronDown className="h-4 w-4 rotate-[-90deg] ml-2" />
+                      <ChevronDown className="h-4 w-4 rotate-[-90deg] group-hover/link:translate-x-0.5 transition-transform" />
                     </Link>
                   </div>
                 </DropdownMenuContent>
@@ -157,10 +157,10 @@ export function Header() {
               <Link
                 to="/integrations"
                 className={cn(
-                  'px-3 py-2 rounded-md text-sm font-medium transition-colors',
+                  'px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200',
                   isActive('/integrations')
-                    ? 'bg-brand-lightBlue/50 text-brand-darkBlue font-semibold'
-                    : 'text-brand-darkBlue/80 hover:text-brand-darkBlue hover:bg-brand-lightBlue/30'
+                    ? 'bg-brand-lightBlue/60 text-brand-darkBlue font-semibold'
+                    : 'text-brand-darkBlue/70 hover:text-brand-darkBlue hover:bg-brand-lightBlue/40'
                 )}
               >
                 Интеграции
@@ -172,10 +172,10 @@ export function Header() {
                   key={item.path}
                   to={item.path}
                   className={cn(
-                    'px-3 py-2 rounded-md text-sm font-medium transition-colors',
+                    'px-4 py-2.5 rounded-lg text-sm font-medium transition-all duration-200',
                     isActive(item.path)
-                      ? 'bg-brand-lightBlue/50 text-brand-darkBlue font-semibold'
-                      : 'text-brand-darkBlue/80 hover:text-brand-darkBlue hover:bg-brand-lightBlue/30'
+                      ? 'bg-brand-lightBlue/60 text-brand-darkBlue font-semibold'
+                      : 'text-brand-darkBlue/70 hover:text-brand-darkBlue hover:bg-brand-lightBlue/40'
                   )}
                 >
                   {item.label}
@@ -184,24 +184,33 @@ export function Header() {
             </nav>
 
             {/* Right side controls */}
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center gap-2">
               {/* Theme Toggle */}
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={toggleTheme}
-                className="hidden sm:flex"
+                className="hidden sm:flex h-9 w-9 p-0 rounded-lg"
                 aria-label="Toggle theme"
               >
-                {theme === 'light' ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
+                {theme === 'light' ? <Moon className="h-4.5 w-4.5" /> : <Sun className="h-4.5 w-4.5" />}
               </Button>
 
               {/* CTA Buttons */}
-              <div className="hidden md:flex items-center space-x-2">
-                <Button variant="outline" size="sm" onClick={() => setContactFormOpen(true)}>
+              <div className="hidden md:flex items-center gap-2">
+                <Button 
+                  variant="outline" 
+                  size="sm" 
+                  onClick={() => setContactFormOpen(true)}
+                  className="h-9 px-4 text-sm font-medium"
+                >
                   Демо
                 </Button>
-                <Button size="sm" onClick={() => window.open('https://app.delever.io', '_blank')}>
+                <Button 
+                  size="sm" 
+                  onClick={() => window.open('https://app.delever.io', '_blank')}
+                  className="h-9 px-4 text-sm font-medium"
+                >
                   Войти
                 </Button>
               </div>
@@ -211,7 +220,7 @@ export function Header() {
                 variant="ghost"
                 size="sm"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden"
+                className="lg:hidden h-9 w-9 p-0 rounded-lg"
                 aria-label="Toggle menu"
               >
                 {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -222,24 +231,24 @@ export function Header() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="lg:hidden border-t border-brand-lightTeal/20 bg-white">
-            <nav className="container mx-auto px-4 py-4 space-y-2">
+          <div className="lg:hidden border-t border-brand-lightTeal/20 bg-white/98 backdrop-blur-md animate-in slide-in-from-top-2">
+            <nav className="container mx-auto px-4 py-6 space-y-1">
               {/* Products Section */}
-              <div className="mb-4">
-                <div className="px-3 py-2 text-sm font-semibold text-brand-darkBlue mb-2">
+              <div className="mb-6">
+                <div className="px-3 py-2.5 text-xs font-bold text-brand-darkBlue/50 uppercase tracking-wider mb-3">
                   Продукты
                 </div>
-                <div className="pl-4 space-y-1">
+                <div className="space-y-1">
                   {productItems.map((item) => (
                     <Link
                       key={item.path}
                       to={item.path}
                       onClick={() => setMobileMenuOpen(false)}
                       className={cn(
-                        'block px-3 py-2 rounded-md text-sm font-medium',
+                        'block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200',
                         isActive(item.path)
-                          ? 'bg-brand-lightBlue text-brand-darkBlue font-semibold'
-                          : 'text-brand-darkBlue/80'
+                          ? 'bg-brand-lightBlue/60 text-brand-darkBlue font-semibold'
+                          : 'text-brand-darkBlue/70 hover:bg-brand-lightBlue/40 hover:text-brand-darkBlue'
                       )}
                     >
                       {item.label}
@@ -249,25 +258,40 @@ export function Header() {
               </div>
 
               {/* Other Nav Items */}
-              {navItems.map((item) => (
+              <div className="space-y-1">
                 <Link
-                  key={item.path}
-                  to={item.path}
+                  to="/integrations"
                   onClick={() => setMobileMenuOpen(false)}
                   className={cn(
-                    'block px-3 py-2 rounded-md text-base font-medium',
-                    isActive(item.path)
-                      ? 'bg-brand-lightBlue/50 text-brand-darkBlue font-semibold'
-                      : 'text-brand-darkBlue/80'
+                    'block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200',
+                    isActive('/integrations')
+                      ? 'bg-brand-lightBlue/60 text-brand-darkBlue font-semibold'
+                      : 'text-brand-darkBlue/70 hover:bg-brand-lightBlue/40 hover:text-brand-darkBlue'
                   )}
                 >
-                  {item.label}
+                  Интеграции
                 </Link>
-              ))}
-              <div className="pt-4 space-y-2 border-t border-brand-lightTeal/20 mt-4">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setMobileMenuOpen(false)}
+                    className={cn(
+                      'block px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200',
+                      isActive(item.path)
+                        ? 'bg-brand-lightBlue/60 text-brand-darkBlue font-semibold'
+                        : 'text-brand-darkBlue/70 hover:bg-brand-lightBlue/40 hover:text-brand-darkBlue'
+                    )}
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+              
+              <div className="pt-6 space-y-2 border-t border-brand-lightTeal/20 mt-6">
                 <Button
                   variant="outline"
-                  className="w-full"
+                  className="w-full h-11 font-medium"
                   onClick={() => {
                     setContactFormOpen(true)
                     setMobileMenuOpen(false)
@@ -276,7 +300,7 @@ export function Header() {
                   Получить демо
                 </Button>
                 <Button
-                  className="w-full"
+                  className="w-full h-11 font-medium"
                   onClick={() => window.open('https://app.delever.io', '_blank')}
                 >
                   Войти в систему
