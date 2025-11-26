@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, Moon, Sun, ShoppingCart, Truck, BarChart3, Megaphone, Plug, Globe, ChevronDown } from 'lucide-react'
+import { Menu, X, Moon, Sun, ShoppingCart, Truck, BarChart3, Megaphone, Plug, ChevronDown } from 'lucide-react'
 import { useTheme } from '@/contexts/ThemeContext'
 import { Button } from './ui/Button'
 import { ContactForm } from './ContactForm'
@@ -10,7 +10,6 @@ import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
-  DropdownMenuItem,
 } from './ui/DropdownMenu'
 
 export function Header() {

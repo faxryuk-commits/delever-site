@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Mail, Phone, MapPin, Linkedin, Youtube, Globe, ChevronDown } from 'lucide-react'
+import { MapPin, Linkedin, Youtube, Globe, ChevronDown } from 'lucide-react'
 import { Logo } from './Logo'
 import { useState } from 'react'
 
