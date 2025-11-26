@@ -114,7 +114,7 @@ export function Analytics() {
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white rounded-2xl p-6 border border-brand-lightTeal/20 shadow-soft hover:shadow-medium transition-all duration-300"
+              <div className="bg-white rounded-2xl p-6 border border-brand-lightTeal/20 shadow-soft hover:shadow-medium transition-all duration-300">
                 <h3 className="text-xl font-semibold text-brand-darkBlue mb-3">
                   Оптимизация меню
                 </h3>
@@ -122,7 +122,7 @@ export function Analytics() {
                   Благодаря ABC-XYZ анализу клиент выявил непопулярные позиции и оптимизировал меню, что привело к росту среднего чека на 15%.
                 </p>
               </div>
-              <div className="bg-white rounded-2xl p-6 border border-brand-lightTeal/20 shadow-soft hover:shadow-medium transition-all duration-300"
+              <div className="bg-white rounded-2xl p-6 border border-brand-lightTeal/20 shadow-soft hover:shadow-medium transition-all duration-300">
                 <h3 className="text-xl font-semibold text-brand-darkBlue mb-3">
                   Прогнозирование спроса
                 </h3>
