@@ -35,13 +35,13 @@ const audiences = [
 
 export function TargetAudience() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
             Для кого Delever
           </h2>
-          <p className="text-xl text-brand-darkBlue/80 max-w-2xl mx-auto">
+          <p className="text-xl text-brand-darkBlue/70 max-w-2xl mx-auto font-light">
             Решение для всех типов заведений общественного питания
           </p>
         </div>
@@ -50,22 +50,22 @@ export function TargetAudience() {
           {audiences.map((audience, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl p-6 shadow-sm border border-brand-lightTeal/30"
+              className="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20"
             >
-              <div className="text-brand-darkBlue mb-4">{audience.icon}</div>
-              <h3 className="text-xl font-semibold text-brand-darkBlue mb-3">
+              <div className="text-brand-darkBlue mb-5">{audience.icon}</div>
+              <h3 className="text-xl font-semibold text-brand-darkBlue mb-4 tracking-tight">
                 {audience.title}
               </h3>
-              <div className="space-y-2">
+              <div className="space-y-3">
                 <div>
-                  <p className="text-sm font-medium text-brand-darkBlue/60 mb-1">
+                  <p className="text-sm font-medium text-brand-darkBlue/55 mb-1">
                     Проблема:
                   </p>
-                  <p className="text-sm text-brand-darkBlue/80">{audience.pain}</p>
+                  <p className="text-sm text-brand-darkBlue/65 leading-relaxed">{audience.pain}</p>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-brand-darkBlue mb-1">Выгода:</p>
-                  <p className="text-sm text-brand-darkBlue/80">{audience.benefit}</p>
+                  <p className="text-sm font-medium text-brand-darkBlue/70 mb-1">Выгода:</p>
+                  <p className="text-sm text-brand-darkBlue/65 leading-relaxed">{audience.benefit}</p>
                 </div>
               </div>
             </div>
