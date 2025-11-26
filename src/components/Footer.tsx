@@ -37,6 +37,11 @@ export function Footer() {
             <h3 className="text-white font-semibold mb-4">Продукты</h3>
             <ul className="space-y-2 text-sm">
               <li>
+                <Link to="/products" className="hover:text-white transition-colors">
+                  Все продукты
+                </Link>
+              </li>
+              <li>
                 <Link to="/products/channels" className="hover:text-white transition-colors">
                   Каналы продаж
                 </Link>

@@ -5,6 +5,7 @@ import * as Tooltip from '@radix-ui/react-tooltip'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
 import { Home } from './pages/Home'
+import { Products } from './pages/Products'
 import { Channels } from './pages/products/Channels'
 import { Operations } from './pages/products/Operations'
 import { Analytics } from './pages/products/Analytics'
@@ -24,6 +25,7 @@ function App() {
             <main className="flex-1">
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/products" element={<Products />} />
                 <Route path="/products/channels" element={<Channels />} />
                 <Route path="/products/operations" element={<Operations />} />
                 <Route path="/products/analytics" element={<Analytics />} />
