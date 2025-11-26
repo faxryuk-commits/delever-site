@@ -30,34 +30,31 @@ export function About() {
         {/* Hero */}
         <section className="container mx-auto max-w-7xl mb-20">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Кто стоит за
-              <br />
-              <span className="text-primary-600">Delever</span>
+            <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6">
+              О компании Delever
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Команда с опытом работы в агрегаторах, сетях ресторанов и технологиях
+            <p className="text-xl text-brand-darkBlue/80 mb-8">
+              Мы создаём технологии, которые помогают ресторанам расти быстрее и работать эффективнее
             </p>
           </div>
         </section>
 
         {/* History */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBeige">
           <div className="container mx-auto max-w-7xl">
             <div className="max-w-3xl mx-auto">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                История
+              <h2 className="text-4xl font-bold text-brand-darkBlue mb-6">
+                Наша история
               </h2>
-              <div className="space-y-4 text-gray-600 dark:text-gray-300">
+              <div className="space-y-4 text-brand-darkBlue/80 leading-relaxed">
                 <p>
-                  Delever был создан командой с многолетним опытом работы в сфере доставки еды.
-                  Наш опыт включает работу в крупных агрегаторах, управление сетями ресторанов и
-                  разработку технологических решений.
+                  Delever создан командой с опытом работы в крупных агрегаторах доставки, сетях ресторанов и разработке технологических решений. Мы знаем проблемы ресторанов изнутри.
                 </p>
                 <p>
-                  Мы поняли, что ресторанам нужна единая платформа для управления всеми аспектами
-                  доставки — от приёма заказов до аналитики и маркетинга. Так родилась идея Delever
-                  — операционной системы для доставки.
+                  Видя, как рестораны теряют прибыль на комиссиях агрегаторов и тратят время на ручную работу, мы решили создать единую платформу, которая решает все задачи доставки — от приёма заказов до аналитики и маркетинга.
+                </p>
+                <p>
+                  Сегодня Delever помогает более 500 заведениям в 5 странах увеличивать прибыль и упрощать операции.
                 </p>
               </div>
             </div>
@@ -95,24 +92,24 @@ export function About() {
         </section>
 
         {/* Values */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Ценности и видение
+              <h2 className="text-4xl font-bold text-brand-darkBlue mb-4">
+                Наши ценности
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {values.map((value, idx) => (
                 <div
                   key={idx}
-                  className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700"
+                  className="bg-brand-lightBeige rounded-xl p-6 border-2 border-brand-lightTeal/30"
                 >
-                  <div className="text-primary-600 mb-4">{value.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  <div className="text-brand-darkBlue mb-4">{value.icon}</div>
+                  <h3 className="text-xl font-semibold text-brand-darkBlue mb-2">
                     {value.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300">{value.description}</p>
+                  <p className="text-brand-darkBlue/80">{value.description}</p>
                 </div>
               ))}
             </div>
@@ -120,11 +117,11 @@ export function About() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-primary-600 text-white">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-darkBlue text-white">
           <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-4xl font-bold mb-4">Готовы обсудить сотрудничество?</h2>
-            <p className="text-xl text-primary-100 mb-8">
-              Свяжитесь с нами и узнайте, как Delever может помочь вашему бизнесу
+            <h2 className="text-4xl font-bold mb-4">Готовы начать работать с нами?</h2>
+            <p className="text-xl text-white/90 mb-8">
+              Свяжитесь с нами и узнайте, как Delever поможет увеличить прибыль и упростить операции вашего ресторана
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" onClick={() => setContactFormOpen(true)}>
