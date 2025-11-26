@@ -25,16 +25,16 @@ const aiFeatures = [
 
 export function AILayer() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-lightBlue rounded-full mb-4">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-accent rounded-2xl mb-5">
             <Brain className="h-8 w-8 text-brand-darkBlue" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
             AI, который работает на ваш бизнес
           </h2>
-          <p className="text-xl text-brand-darkBlue/80 max-w-2xl mx-auto">
+          <p className="text-xl text-brand-darkBlue/70 max-w-2xl mx-auto font-light">
             Искусственный интеллект анализирует ваши данные и предлагает конкретные решения для увеличения прибыли и оптимизации операций
           </p>
         </div>
@@ -43,18 +43,18 @@ export function AILayer() {
           {aiFeatures.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl p-6 shadow-sm border-2 border-brand-lightTeal/30"
+              className="bg-white rounded-2xl p-6 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20"
             >
               <div className="text-brand-darkBlue mb-4">{feature.icon}</div>
-              <h3 className="text-lg font-semibold text-brand-darkBlue mb-2">
+              <h3 className="text-lg font-semibold text-brand-darkBlue mb-2 tracking-tight">
                 {feature.title}
               </h3>
-              <p className="text-sm text-brand-darkBlue/70">{feature.description}</p>
+              <p className="text-sm text-brand-darkBlue/65 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="bg-gradient-brand rounded-xl p-8 border-2 border-brand-darkBlue/20">
+        <div className="bg-gradient-accent rounded-2xl p-8 border border-brand-darkBlue/10">
           <p className="text-center text-lg font-semibold text-brand-darkBlue">
             AI встроен в основу платформы — это не дополнительная функция, а основа системы
           </p>

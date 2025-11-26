@@ -39,6 +39,14 @@ export default {
       backgroundImage: {
         'gradient-brand': 'linear-gradient(135deg, #afdbd9 0%, #f3e9dd 100%)',
         'gradient-logo': 'linear-gradient(180deg, #afdbd9 0%, #f3e9dd 100%)',
+        'gradient-subtle': 'linear-gradient(180deg, rgba(232, 251, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%)',
+        'gradient-accent': 'linear-gradient(135deg, rgba(175, 219, 217, 0.1) 0%, rgba(243, 233, 221, 0.1) 100%)',
+        'gradient-dark': 'linear-gradient(135deg, #002A47 0%, #001a2d 100%)',
+      },
+      boxShadow: {
+        'soft': '0 2px 8px rgba(0, 42, 71, 0.08)',
+        'medium': '0 4px 16px rgba(0, 42, 71, 0.12)',
+        'large': '0 8px 32px rgba(0, 42, 71, 0.16)',
       },
       keyframes: {
         'accordion-down': {

@@ -41,7 +41,7 @@ export function PageNavigation() {
     currentIndex < navigationOrder.length - 1 ? navigationOrder[currentIndex + 1] : null
 
   return (
-    <section className="py-12 px-4 sm:px-6 lg:px-8 bg-brand-lightBeige border-t border-brand-lightTeal/30">
+    <section className="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-subtle border-t border-brand-lightTeal/10">
       <div className="container mx-auto max-w-7xl">
         <div className="flex items-center justify-between gap-4">
           {/* Previous Page */}
@@ -54,8 +54,8 @@ export function PageNavigation() {
                 >
                   <ChevronLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform" />
                   <div className="text-left">
-                    <div className="text-xs text-brand-darkBlue/60 mb-1">Предыдущая</div>
-                    <div className="font-semibold text-brand-darkBlue">{prevItem.label}</div>
+                    <div className="text-xs text-brand-darkBlue/55 mb-1 font-medium">Предыдущая</div>
+                    <div className="font-semibold text-brand-darkBlue tracking-tight">{prevItem.label}</div>
                   </div>
                 </Button>
               </Link>
@@ -65,7 +65,7 @@ export function PageNavigation() {
           </div>
 
           {/* Current Page Indicator */}
-          <div className="hidden md:flex items-center gap-2 text-sm text-brand-darkBlue/60">
+          <div className="hidden md:flex items-center gap-2 text-sm text-brand-darkBlue/50 font-medium">
             <span>{currentIndex + 1}</span>
             <span>/</span>
             <span>{navigationOrder.length}</span>
@@ -80,8 +80,8 @@ export function PageNavigation() {
                   className="w-full sm:w-auto group flex items-center gap-2"
                 >
                   <div className="text-right">
-                    <div className="text-xs text-brand-darkBlue/60 mb-1">Следующая</div>
-                    <div className="font-semibold text-brand-darkBlue">{nextItem.label}</div>
+                    <div className="text-xs text-brand-darkBlue/55 mb-1 font-medium">Следующая</div>
+                    <div className="font-semibold text-brand-darkBlue tracking-tight">{nextItem.label}</div>
                   </div>
                   <ChevronRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Button>

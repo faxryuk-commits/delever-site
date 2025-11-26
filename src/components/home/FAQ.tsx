@@ -50,13 +50,13 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-subtle">
       <div className="container mx-auto max-w-4xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
             Часто задаваемые вопросы
           </h2>
-          <p className="text-xl text-brand-darkBlue/80">
+          <p className="text-xl text-brand-darkBlue/70 font-light">
             Ответы на популярные вопросы о платформе Delever
           </p>
         </div>
@@ -65,7 +65,7 @@ export function FAQ() {
           {faqs.map((faq, idx) => (
             <AccordionItem key={idx} value={`item-${idx}`}>
               <AccordionTrigger className="text-left text-brand-darkBlue">{faq.question}</AccordionTrigger>
-              <AccordionContent className="text-brand-darkBlue/80">
+              <AccordionContent className="text-brand-darkBlue/70 leading-relaxed">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

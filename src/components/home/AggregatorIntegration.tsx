@@ -19,13 +19,13 @@ const features = [
 
 export function AggregatorIntegration() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBlue">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-subtle">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
             Все агрегаторы в одном окне
           </h2>
-          <p className="text-xl text-brand-darkBlue/80 max-w-2xl mx-auto">
+          <p className="text-xl text-brand-darkBlue/70 max-w-2xl mx-auto font-light">
             Забудьте про несколько планшетов на кухне. Все заказы из агрегаторов приходят в единую систему Delever
           </p>
         </div>
@@ -33,23 +33,23 @@ export function AggregatorIntegration() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column */}
           <div>
-            <div className="bg-white rounded-xl p-6 shadow-sm border-2 border-brand-lightTeal/30 mb-6">
-              <h3 className="text-2xl font-semibold text-brand-darkBlue mb-4">
+            <div className="bg-white rounded-2xl p-8 shadow-soft border border-brand-lightTeal/20 mb-6">
+              <h3 className="text-2xl font-semibold text-brand-darkBlue mb-5 tracking-tight">
                 Как это работает
               </h3>
-              <p className="text-brand-darkBlue/80 mb-6">
+              <p className="text-brand-darkBlue/70 mb-6 leading-relaxed">
                 Заказы из всех агрегаторов автоматически поступают в Delever. Управляйте стоп-листами, меню и ценами из одного места — изменения синхронизируются со всеми платформами.
               </p>
               <ul className="space-y-3">
                 {features.map((feature, idx) => (
                   <li key={idx} className="flex items-start space-x-3">
                     <CheckCircle className="h-5 w-5 text-brand-darkBlue mt-0.5 flex-shrink-0" />
-                    <span className="text-brand-darkBlue/80">{feature}</span>
+                    <span className="text-brand-darkBlue/70">{feature}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="bg-brand-lightBeige rounded-lg p-4 border-2 border-brand-darkBlue/20">
+            <div className="bg-gradient-accent rounded-xl p-5 border border-brand-darkBlue/10">
               <p className="text-sm font-semibold text-brand-darkBlue">
                 Больше никаких планшетов на кухне — все заказы в одном интерфейсе
               </p>
@@ -67,7 +67,7 @@ export function AggregatorIntegration() {
                 {aggregators.map((agg, idx) => (
                   <div
                     key={idx}
-                    className="bg-white px-4 py-2 rounded-lg border-2 border-brand-lightTeal/30 text-sm font-medium text-brand-darkBlue hover:border-brand-darkBlue transition-all"
+                    className="bg-white px-4 py-2 rounded-lg border border-brand-lightTeal/20 text-sm font-medium text-brand-darkBlue hover:border-brand-darkBlue/40 hover:shadow-soft transition-all"
                   >
                     {agg}
                   </div>
@@ -80,13 +80,13 @@ export function AggregatorIntegration() {
               {stats.map((stat, idx) => (
                 <div
                   key={idx}
-                  className="bg-white rounded-lg p-4 border-2 border-brand-lightTeal/30 text-center"
+                  className="bg-white rounded-xl p-5 border border-brand-lightTeal/20 text-center shadow-soft hover:shadow-medium transition-all"
                 >
-                  <div className="text-brand-darkBlue mb-2 flex justify-center">{stat.icon}</div>
-                  <div className="text-2xl font-bold text-brand-darkBlue mb-1">
+                  <div className="text-brand-darkBlue mb-3 flex justify-center">{stat.icon}</div>
+                  <div className="text-2xl font-bold text-brand-darkBlue mb-1 tracking-tight">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-brand-darkBlue/70">{stat.label}</div>
+                  <div className="text-sm text-brand-darkBlue/65 font-medium">{stat.label}</div>
                 </div>
               ))}
             </div>

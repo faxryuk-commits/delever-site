@@ -49,7 +49,7 @@ export function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-brand-lightTeal/20">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white/98 backdrop-blur-lg border-b border-brand-lightTeal/10 shadow-soft">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -97,8 +97,8 @@ export function Header() {
                   className={cn(
                     'px-3 py-2 rounded-md text-sm font-medium transition-colors',
                     isActive(item.path)
-                      ? 'bg-brand-lightBlue text-brand-darkBlue font-semibold'
-                      : 'text-brand-darkBlue hover:bg-brand-lightTeal/30'
+                      ? 'bg-brand-lightBlue/50 text-brand-darkBlue font-semibold'
+                      : 'text-brand-darkBlue/80 hover:text-brand-darkBlue hover:bg-brand-lightBlue/30'
                   )}
                 >
                   {item.label}
@@ -180,8 +180,8 @@ export function Header() {
                   className={cn(
                     'block px-3 py-2 rounded-md text-base font-medium',
                     isActive(item.path)
-                      ? 'bg-brand-lightBlue text-brand-darkBlue font-semibold'
-                      : 'text-brand-darkBlue'
+                      ? 'bg-brand-lightBlue/50 text-brand-darkBlue font-semibold'
+                      : 'text-brand-darkBlue/80'
                   )}
                 >
                   {item.label}

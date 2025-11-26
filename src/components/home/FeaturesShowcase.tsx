@@ -42,13 +42,13 @@ const features: Feature[] = [
 
 export function FeaturesShowcase() {
   return (
-    <section id="features" className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBeige">
+    <section id="features" className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
             Собственные каналы продаж
           </h2>
-          <p className="text-xl text-brand-darkBlue/80 max-w-2xl mx-auto">
+          <p className="text-xl text-brand-darkBlue/70 max-w-2xl mx-auto font-light">
             Запустите все цифровые каналы продаж под вашим брендом. Единый каталог, общие акции и один профиль клиента во всех каналах.
           </p>
         </div>
@@ -57,13 +57,13 @@ export function FeaturesShowcase() {
           {features.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-brand-lightTeal/30"
+              className="bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20 hover:border-brand-lightTeal/40 group"
             >
-              <div className="text-brand-darkBlue mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-brand-darkBlue mb-2">
+              <div className="text-brand-darkBlue mb-5 group-hover:scale-110 transition-transform duration-300">{feature.icon}</div>
+              <h3 className="text-xl font-semibold text-brand-darkBlue mb-3 tracking-tight">
                 {feature.title}
               </h3>
-              <p className="text-brand-darkBlue/70">{feature.description}</p>
+              <p className="text-brand-darkBlue/65 leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

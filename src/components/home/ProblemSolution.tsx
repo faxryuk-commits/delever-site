@@ -18,43 +18,43 @@ const solutions = [
 
 export function ProblemSolution() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBlue">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
             От хаоса к порядку
           </h2>
-          <p className="text-xl text-brand-darkBlue/80 max-w-2xl mx-auto">
+          <p className="text-xl text-brand-darkBlue/70 max-w-2xl mx-auto font-light">
             Превратите множество систем, планшетов и ручной работы в единую автоматизированную платформу
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Problems */}
-          <div>
-            <h3 className="text-2xl font-semibold text-brand-darkBlue mb-6">
+          <div className="bg-white rounded-2xl p-8 border border-red-100 shadow-soft">
+            <h3 className="text-2xl font-semibold text-brand-darkBlue mb-6 tracking-tight">
               Проблемы без Delever
             </h3>
             <ul className="space-y-4">
               {problems.map((problem, idx) => (
                 <li key={idx} className="flex items-start space-x-3">
                   <XCircle className="h-6 w-6 text-red-500 mt-0.5 flex-shrink-0" />
-                  <span className="text-brand-darkBlue/80">{problem}</span>
+                  <span className="text-brand-darkBlue/70 leading-relaxed">{problem}</span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Solutions */}
-          <div>
-            <h3 className="text-2xl font-semibold text-brand-darkBlue mb-6">
+          <div className="bg-gradient-accent rounded-2xl p-8 border border-brand-lightTeal/30 shadow-soft">
+            <h3 className="text-2xl font-semibold text-brand-darkBlue mb-6 tracking-tight">
               Как Delever решает
             </h3>
             <ul className="space-y-4">
               {solutions.map((solution, idx) => (
                 <li key={idx} className="flex items-start space-x-3">
                   <CheckCircle className="h-6 w-6 text-brand-darkBlue mt-0.5 flex-shrink-0" />
-                  <span className="text-brand-darkBlue/80">{solution}</span>
+                  <span className="text-brand-darkBlue/70 leading-relaxed">{solution}</span>
                 </li>
               ))}
             </ul>

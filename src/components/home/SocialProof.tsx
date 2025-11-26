@@ -89,10 +89,10 @@ const stats: Array<{
 
 export function SocialProof() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBeige">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
             Delever в цифрах
           </h2>
         </div>
@@ -101,7 +101,7 @@ export function SocialProof() {
           {stats.map((stat, idx) => (
             <div key={idx} className="text-center">
               <AnimatedCounter value={stat.value} suffix={stat.suffix} prefix={stat.prefix || ''} format={stat.format || 'number'} />
-              <p className="text-lg text-brand-darkBlue/70 mt-2">{stat.label}</p>
+              <p className="text-lg text-brand-darkBlue/65 mt-2 font-medium">{stat.label}</p>
             </div>
           ))}
         </div>

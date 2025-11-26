@@ -34,13 +34,13 @@ const products = [
 
 export function ProductOverview() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-accent">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
             Всё необходимое для роста вашего бизнеса
           </h2>
-          <p className="text-xl text-brand-darkBlue/80 max-w-3xl mx-auto">
+          <p className="text-xl text-brand-darkBlue/70 max-w-3xl mx-auto font-light">
             Четыре модуля, которые работают вместе как единая система. От приёма заказов до аналитики и маркетинга — всё в одной платформе.
           </p>
         </div>
@@ -53,15 +53,15 @@ export function ProductOverview() {
               <Link
                 key={idx}
                 to={product.link}
-                className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all border-2 border-brand-lightTeal/30 hover:border-brand-darkBlue"
+                className="group bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20 hover:border-brand-darkBlue/30"
               >
-                <div className="w-14 h-14 bg-brand-darkBlue rounded-lg flex items-center justify-center text-white mb-4">
+                <div className="w-14 h-14 bg-gradient-dark rounded-xl flex items-center justify-center text-white mb-5 group-hover:scale-110 transition-transform duration-300">
                   {product.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-brand-darkBlue mb-2">
+                <h3 className="text-xl font-semibold text-brand-darkBlue mb-3 tracking-tight">
                   {product.title}
                 </h3>
-                <p className="text-brand-darkBlue/70 mb-4 text-sm leading-relaxed">{product.description}</p>
+                <p className="text-brand-darkBlue/65 mb-4 text-sm leading-relaxed">{product.description}</p>
                 <div className="flex items-center text-brand-darkBlue font-semibold group-hover:translate-x-1 transition-transform text-sm">
                   Узнать больше
                   <ArrowRight className="ml-2 h-4 w-4" />
@@ -78,15 +78,15 @@ export function ProductOverview() {
               <Link
                 key={idx}
                 to={product.link}
-                className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-lg transition-all border-2 border-brand-lightTeal/30 hover:border-brand-darkBlue"
+                className="group bg-white rounded-2xl p-8 shadow-soft hover:shadow-medium transition-all duration-300 border border-brand-lightTeal/20 hover:border-brand-darkBlue/30"
               >
-                <div className="w-14 h-14 bg-brand-darkBlue rounded-lg flex items-center justify-center text-white mb-4">
+                <div className="w-14 h-14 bg-gradient-dark rounded-xl flex items-center justify-center text-white mb-5 group-hover:scale-110 transition-transform duration-300">
                   {product.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-brand-darkBlue mb-2">
+                <h3 className="text-xl font-semibold text-brand-darkBlue mb-3 tracking-tight">
                   {product.title}
                 </h3>
-                <p className="text-brand-darkBlue/70 mb-4 text-sm leading-relaxed">{product.description}</p>
+                <p className="text-brand-darkBlue/65 mb-4 text-sm leading-relaxed">{product.description}</p>
                 <div className="flex items-center text-brand-darkBlue font-semibold group-hover:translate-x-1 transition-transform text-sm">
                   Узнать больше
                   <ArrowRight className="ml-2 h-4 w-4" />
