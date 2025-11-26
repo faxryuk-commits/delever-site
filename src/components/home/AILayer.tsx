@@ -28,14 +28,14 @@ export function AILayer() {
     <section className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-100 dark:bg-primary-900/20 rounded-full mb-4">
-            <Brain className="h-8 w-8 text-primary-600" />
+          <div className="inline-flex items-center justify-center w-16 h-16 bg-brand-lightBlue rounded-full mb-4">
+            <Brain className="h-8 w-8 text-brand-darkBlue" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Delever AI — превращает данные в решения
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
+            AI, который работает на ваш бизнес
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            ИИ прогнозирует спрос, оптимизирует запасы, персонал, маркетинг и денежный поток
+          <p className="text-xl text-brand-darkBlue/80 max-w-2xl mx-auto">
+            Искусственный интеллект анализирует ваши данные и предлагает конкретные решения для увеличения прибыли и оптимизации операций
           </p>
         </div>
 
@@ -43,20 +43,20 @@ export function AILayer() {
           {aiFeatures.map((feature, idx) => (
             <div
               key={idx}
-              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700"
+              className="bg-white rounded-xl p-6 shadow-sm border-2 border-brand-lightTeal/30"
             >
-              <div className="text-primary-600 mb-4">{feature.icon}</div>
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+              <div className="text-brand-darkBlue mb-4">{feature.icon}</div>
+              <h3 className="text-lg font-semibold text-brand-darkBlue mb-2">
                 {feature.title}
               </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-300">{feature.description}</p>
+              <p className="text-sm text-brand-darkBlue/70">{feature.description}</p>
             </div>
           ))}
         </div>
 
-        <div className="bg-gradient-to-r from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 rounded-xl p-8 border border-primary-200 dark:border-primary-800">
-          <p className="text-center text-lg font-medium text-primary-900 dark:text-primary-300">
-            AI-движок встроен в ядро системы — не надстройка, а фундамент
+        <div className="bg-gradient-brand rounded-xl p-8 border-2 border-brand-darkBlue/20">
+          <p className="text-center text-lg font-semibold text-brand-darkBlue">
+            AI встроен в основу платформы — это не дополнительная функция, а основа системы
           </p>
         </div>
       </div>

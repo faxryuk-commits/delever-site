@@ -4,29 +4,29 @@ import { ShoppingCart, Truck, BarChart3, Megaphone, ArrowRight } from 'lucide-re
 const products = [
   {
     icon: <ShoppingCart className="h-8 w-8" />,
-    title: 'Channels',
-    description: 'Все каналы продаж в одном месте. Telegram-бот, сайт, приложение, QR-меню и другие.',
+    title: 'Каналы продаж',
+    description: 'Запустите собственные каналы продаж: сайт, приложение, Telegram-бот, QR-меню. Все заказы в единой системе без комиссий агрегаторов.',
     link: '/products/channels',
     color: 'bg-blue-500',
   },
   {
     icon: <Truck className="h-8 w-8" />,
-    title: 'Operations',
-    description: 'Диспетчеризация, курьеры, кухня, статусы. Полный контроль над операциями доставки.',
+    title: 'Операции',
+    description: 'Управляйте диспетчеризацией, курьерами и кухней из одного окна. Автоматизация процессов снижает ошибки и ускоряет доставку.',
     link: '/products/operations',
     color: 'bg-green-500',
   },
   {
     icon: <BarChart3 className="h-8 w-8" />,
-    title: 'Analytics',
-    description: 'Дашборды, отчёты, показатели. Реальное управление на основе данных.',
+    title: 'Аналитика',
+    description: 'Принимайте решения на основе данных. Дашборды, отчёты и AI-прогнозы помогают оптимизировать меню, запасы и персонал.',
     link: '/products/analytics',
     color: 'bg-purple-500',
   },
   {
     icon: <Megaphone className="h-8 w-8" />,
-    title: 'Marketing',
-    description: 'Рассылки, сегментация, акции. Маркетинг и лояльность на автопилоте.',
+    title: 'Маркетинг',
+    description: 'Автоматизируйте маркетинг и лояльность. RFM-анализ, персональные предложения и триггерные рассылки увеличивают средний чек.',
     link: '/products/marketing',
     color: 'bg-orange-500',
   },
@@ -38,18 +38,18 @@ export function ProductOverview() {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
-            Найдите правильное решение для каждого этапа роста
+            Всё необходимое для роста вашего бизнеса
           </h2>
           <p className="text-xl text-brand-darkBlue/80 max-w-3xl mx-auto">
-            Наши решения разработаны, чтобы помочь вам привлекать и удерживать клиентов, развивать бизнес и сохранять контроль над тем, что важно для вас.
+            Четыре модуля, которые работают вместе как единая система. От приёма заказов до аналитики и маркетинга — всё в одной платформе.
           </p>
         </div>
 
         {/* Категории в стиле Deliverect */}
         <div className="mb-12">
-          <h3 className="text-2xl font-semibold text-brand-darkBlue mb-6">Собственные каналы продаж</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {products.slice(0, 2).map((product, idx) => (
+          <h3 className="text-2xl font-semibold text-brand-darkBlue mb-6">Продажи и маркетинг</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            {[products[0], products[3]].map((product, idx) => (
               <Link
                 key={idx}
                 to={product.link}
@@ -73,8 +73,8 @@ export function ProductOverview() {
 
         <div className="mb-12">
           <h3 className="text-2xl font-semibold text-brand-darkBlue mb-6">Операции и аналитика</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {products.slice(2).map((product, idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[products[1], products[2]].map((product, idx) => (
               <Link
                 key={idx}
                 to={product.link}

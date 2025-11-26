@@ -9,23 +9,23 @@ export function Operations() {
   const features = [
     {
       icon: <Truck className="h-8 w-8" />,
-      title: 'Диспетчеризация и статусы',
-      description: 'Автоматическое распределение заказов, отслеживание статусов в реальном времени, уведомления клиентов.',
+      title: 'Диспетчеризация',
+      description: 'Автоматическое распределение заказов между курьерами. Отслеживание статусов в реальном времени и автоматические уведомления клиентов.',
     },
     {
       icon: <Users className="h-8 w-8" />,
       title: 'Курьерский модуль',
-      description: 'Приложение для курьеров, расчёт зарплаты, посещаемость, маршрутизация и оптимизация доставок.',
+      description: 'Мобильное приложение для курьеров с навигацией и маршрутизацией. Автоматический расчёт зарплаты и контроль посещаемости.',
     },
     {
       icon: <Monitor className="h-8 w-8" />,
       title: 'Рабочие места',
-      description: 'Интерфейсы для операторов, кухни и колл-центра. Всё в единой системе.',
+      description: 'Специализированные интерфейсы для операторов, кухни и колл-центра. Все заказы в единой системе без дублирования.',
     },
     {
       icon: <Clock className="h-8 w-8" />,
-      title: 'SLA и стабильность',
-      description: 'Гарантированная стабильность работы, мониторинг и автоматическое восстановление.',
+      title: 'Стабильность 99.9%',
+      description: 'Гарантированная стабильность работы с мониторингом 24/7. Автоматическое восстановление при сбоях.',
     },
   ]
 
@@ -41,13 +41,13 @@ export function Operations() {
         {/* Hero */}
         <section className="container mx-auto max-w-7xl mb-20">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Операционная система
+            <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6">
+              Операции доставки
               <br />
-              <span className="text-primary-600">для вашей доставки</span>
+              <span className="bg-gradient-brand bg-clip-text text-transparent">под полным контролем</span>
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Полный контроль над диспетчеризацией, курьерами, кухней и всеми операциями доставки
+            <p className="text-xl text-brand-darkBlue/80 mb-8">
+              Управляйте диспетчеризацией, курьерами и кухней из одного окна. Автоматизация процессов снижает ошибки и ускоряет доставку на 30%.
             </p>
             <Button size="lg" onClick={() => setContactFormOpen(true)}>
               Оптимизировать операции

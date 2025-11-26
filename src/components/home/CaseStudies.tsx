@@ -50,11 +50,11 @@ export function CaseStudies() {
     <section id="cases" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            Кейсы наших клиентов
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4">
+            Результаты наших клиентов
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Реальные результаты от использования платформы Delever
+          <p className="text-xl text-brand-darkBlue/80 max-w-2xl mx-auto">
+            Реальные цифры роста после внедрения Delever
           </p>
         </div>
 
@@ -62,24 +62,24 @@ export function CaseStudies() {
           {cases.map((caseStudy, idx) => (
             <div
               key={idx}
-              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700"
+              className="bg-white rounded-xl p-6 shadow-sm border-2 border-brand-lightTeal/30"
             >
               <div className="mb-4">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                <h3 className="text-2xl font-bold text-brand-darkBlue">
                   {caseStudy.company}
                 </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">{caseStudy.location}</p>
+                <p className="text-sm text-brand-darkBlue/60">{caseStudy.location}</p>
               </div>
 
               <div className="space-y-3 mb-6">
                 {caseStudy.results.map((result, rIdx) => (
                   <div key={rIdx} className="flex items-center space-x-3">
-                    <div className="text-primary-600">{result.icon}</div>
+                    <div className="text-brand-darkBlue">{result.icon}</div>
                     <div>
-                      <div className="font-semibold text-gray-900 dark:text-white">
+                      <div className="font-semibold text-brand-darkBlue">
                         {result.metric}
                       </div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400">
+                      <div className="text-sm text-brand-darkBlue/70">
                         {result.label}
                       </div>
                     </div>
@@ -87,8 +87,8 @@ export function CaseStudies() {
                 ))}
               </div>
 
-              <div className="bg-primary-50 dark:bg-primary-900/20 rounded-lg p-4">
-                <p className="text-sm font-medium text-primary-900 dark:text-primary-300">
+              <div className="bg-brand-lightBeige rounded-lg p-4 border-2 border-brand-darkBlue/20">
+                <p className="text-sm font-semibold text-brand-darkBlue">
                   {caseStudy.highlight}
                 </p>
               </div>

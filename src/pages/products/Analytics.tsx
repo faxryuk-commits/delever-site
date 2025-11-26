@@ -10,27 +10,27 @@ export function Analytics() {
     {
       icon: <BarChart3 className="h-8 w-8" />,
       title: 'Дашборды',
-      description: 'Дашборды для владельца и управляющего с ключевыми метриками в реальном времени.',
+      description: 'Персонализированные дашборды для владельца и управляющего. Все ключевые метрики в реальном времени на одном экране.',
     },
     {
       icon: <TrendingUp className="h-8 w-8" />,
-      title: 'Анализ заказов и выручки',
-      description: 'Детальный анализ заказов, выручки, среднего чека по каналам, времени и продуктам.',
+      title: 'Анализ продаж',
+      description: 'Детальный анализ заказов, выручки и среднего чека по каналам, времени суток, дням недели и продуктам.',
     },
     {
       icon: <Package className="h-8 w-8" />,
       title: 'ABC-XYZ анализ',
-      description: 'Анализ продуктов по популярности и стабильности спроса для оптимизации меню.',
+      description: 'Определите самые прибыльные и популярные позиции. Оптимизируйте меню, убрав непопулярные блюда и увеличив прибыльность.',
     },
     {
       icon: <Users className="h-8 w-8" />,
-      title: 'KPI по каналам и точкам',
-      description: 'Метрики эффективности по каналам продаж, курьерам, точкам и операторам.',
+      title: 'KPI и эффективность',
+      description: 'Отслеживайте эффективность каждого канала продаж, курьера, точки и оператора. Выявляйте лучшие практики и проблемные зоны.',
     },
     {
       icon: <Brain className="h-8 w-8" />,
-      title: 'Прогнозирование спроса',
-      description: 'AI-модуль для прогнозирования спроса на блюда и оптимизации закупок.',
+      title: 'AI-прогнозы',
+      description: 'Искусственный интеллект предсказывает спрос на блюда, помогая оптимизировать закупки и снижать потери продуктов.',
     },
   ]
 
@@ -40,13 +40,13 @@ export function Analytics() {
         {/* Hero */}
         <section className="container mx-auto max-w-7xl mb-20">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Реальное управление
+            <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6">
+              Аналитика и отчёты
               <br />
-              <span className="text-primary-600">на основе данных</span>
+              <span className="bg-gradient-brand bg-clip-text text-transparent">для принятия решений</span>
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Мощная аналитика для принятия обоснованных решений и роста бизнеса
+            <p className="text-xl text-brand-darkBlue/80 mb-8">
+              Принимайте решения на основе данных, а не интуиции. Дашборды, отчёты и AI-прогнозы помогают оптимизировать меню, запасы и увеличивать прибыль.
             </p>
             <Button size="lg" onClick={() => setContactFormOpen(true)}>
               Подключить аналитику Delever

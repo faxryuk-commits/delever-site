@@ -12,12 +12,12 @@ export function Hero() {
         <div className="container mx-auto max-w-7xl">
           <div className="text-center max-w-5xl mx-auto mb-16">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-brand-darkBlue mb-6 leading-tight">
-              Операционная система
+              Единая платформа
               <br />
-              <span className="bg-gradient-brand bg-clip-text text-transparent">для доставки</span>
+              <span className="bg-gradient-brand bg-clip-text text-transparent">для управления доставкой</span>
             </h1>
             <p className="text-xl md:text-2xl text-brand-darkBlue/80 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Мы помогаем ресторанам масштабироваться быстрее и прибыльнее. Упрощая каждый шаг — от собственных цифровых каналов до оптимизации агрегаторов — заказы выполняются надёжно. Наша платформа на базе AI упрощает операции в доставке, dine-in, take-out и кейтеринге.
+              Управляйте всеми каналами продаж, операциями доставки и аналитикой из одного места. Запустите собственные каналы продаж, автоматизируйте работу с агрегаторами и увеличьте прибыль уже через неделю.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
@@ -49,7 +49,7 @@ export function Hero() {
 
           {/* Integrations logos */}
           <div className="text-center mb-8">
-            <p className="text-sm text-brand-darkBlue/60 mb-6">1000+ интеграций из коробки</p>
+            <p className="text-sm text-brand-darkBlue/60 mb-6">Интеграции с ведущими агрегаторами и POS-системами</p>
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
               {['Wolt', 'Yandex Food', 'Talabat', 'Deliveroo', 'Noon', 'Uzum Tezkor'].map(
                 (brand) => (

@@ -20,16 +20,16 @@ export function Channels() {
         {/* Hero */}
         <section className="container mx-auto max-w-7xl mb-20">
           <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Все цифровые каналы продаж
+            <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6">
+              Собственные каналы продаж
               <br />
-              <span className="text-primary-600">под вашим брендом</span>
+              <span className="bg-gradient-brand bg-clip-text text-transparent">под вашим брендом</span>
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Сайт, приложение, Telegram-бот, QR-меню, киоск, колл-центр — всё в единой платформе
+            <p className="text-xl text-brand-darkBlue/80 mb-8">
+              Запустите сайт, приложение, Telegram-бот, QR-меню и другие каналы без комиссий агрегаторов. Все заказы в единой системе с полным контролем над данными клиентов.
             </p>
             <Button size="lg" onClick={() => setContactFormOpen(true)}>
-              Запустить свои каналы продаж
+              Запустить каналы продаж
             </Button>
           </div>
         </section>
@@ -38,15 +38,14 @@ export function Channels() {
         <FeaturesShowcase />
 
         {/* Work Together */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBeige">
           <div className="container mx-auto max-w-7xl">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Работают вместе
+              <h2 className="text-4xl font-bold text-brand-darkBlue mb-6">
+                Все каналы в единой системе
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                Все каналы продаж используют единый каталог, общие акции и один клиентский профиль.
-                Клиент может заказать через любой канал, и все данные сохраняются в единой системе.
+              <p className="text-xl text-brand-darkBlue/80 mb-8">
+                Единый каталог, общие акции и один профиль клиента во всех каналах. Клиент может заказать через сайт, приложение или Telegram — все данные сохраняются в единой базе.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
                 {['Единый каталог', 'Общие акции', 'Клиентский профиль'].map((feature, idx) => (
@@ -64,11 +63,11 @@ export function Channels() {
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-7xl">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Запуск за 7 дней
+              <h2 className="text-4xl font-bold text-brand-darkBlue mb-4">
+                Запуск за неделю
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300">
-                Быстрый запуск ваших каналов продаж
+              <p className="text-xl text-brand-darkBlue/80">
+                От идеи до запуска — всего 7 дней
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
