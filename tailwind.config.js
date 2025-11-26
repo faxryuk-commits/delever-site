@@ -40,6 +40,20 @@ export default {
         'gradient-brand': 'linear-gradient(135deg, #afdbd9 0%, #f3e9dd 100%)',
         'gradient-logo': 'linear-gradient(180deg, #afdbd9 0%, #f3e9dd 100%)',
       },
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+      },
     },
   },
   plugins: [],
