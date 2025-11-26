@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
 import { PageNavigation } from '@/components/PageNavigation'
+import { FadeInOnScroll } from '@/components/ui/FadeInOnScroll'
 import { Check, ArrowRight, Percent, CreditCard, Gift } from 'lucide-react'
 
 const plans = [
@@ -115,21 +116,23 @@ export function Pricing() {
     <>
       <div className="min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         {/* Hero */}
-        <section className="container mx-auto max-w-7xl mb-20">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6">
-              Тарифы Delever
-            </h1>
-            <p className="text-xl text-brand-darkBlue/80 mb-8">
-              Выберите план, который подходит вашему бизнесу. Гибкая система тарификации с возможностью дополнения модулями.
-            </p>
-          </div>
+        <section className="container mx-auto max-w-7xl mb-12">
+          <FadeInOnScroll>
+            <div className="text-center max-w-3xl mx-auto">
+              <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6 tracking-tight">
+                Тарифы Delever
+              </h1>
+              <p className="text-xl text-brand-darkBlue/80 mb-8 font-light leading-relaxed">
+                Выберите план, который подходит вашему бизнесу. Гибкая система тарификации с возможностью дополнения модулями.
+              </p>
+            </div>
+          </FadeInOnScroll>
         </section>
 
         {/* Deposit & Discounts */}
         <section className="container mx-auto max-w-7xl mb-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-gradient-to-br from-brand-lightBlue to-brand-lightBeige rounded-xl p-6 border-2 border-brand-darkBlue/10">
+            <div className="bg-gradient-to-br from-brand-lightBlue to-brand-lightBeige rounded-xl p-6 border border-brand-darkBlue/10 shadow-soft">
               <div className="flex items-center gap-3 mb-3">
                 <CreditCard className="h-6 w-6 text-brand-darkBlue" />
                 <h3 className="text-xl font-semibold text-brand-darkBlue">Депозит</h3>
@@ -138,7 +141,7 @@ export function Pricing() {
                 Клиент вносит депозит в размере <span className="font-bold">$500</span> перед началом работы. Депозит используется на погашение ежемесячной абонентской платы.
               </p>
             </div>
-            <div className="bg-gradient-to-br from-brand-lightBeige to-brand-lightBlue rounded-xl p-6 border-2 border-brand-darkBlue/10">
+            <div className="bg-gradient-to-br from-brand-lightBeige to-brand-lightBlue rounded-xl p-6 border border-brand-darkBlue/10 shadow-soft">
               <div className="flex items-center gap-3 mb-3">
                 <Gift className="h-6 w-6 text-brand-darkBlue" />
                 <h3 className="text-xl font-semibold text-brand-darkBlue">Скидки</h3>

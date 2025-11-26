@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
 import { PageNavigation } from '@/components/PageNavigation'
+import { FadeInOnScroll } from '@/components/ui/FadeInOnScroll'
 import { Users, Mail, Gift, Zap, ArrowRight } from 'lucide-react'
 
 export function Marketing() {
@@ -49,20 +50,22 @@ export function Marketing() {
     <>
       <div className="min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         {/* Hero */}
-        <section className="container mx-auto max-w-7xl mb-20">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6">
-              Маркетинг и лояльность
-              <br />
-              <span className="bg-gradient-brand bg-clip-text text-transparent">которые работают</span>
-            </h1>
-            <p className="text-xl text-brand-darkBlue/80 mb-8">
-              Автоматизируйте маркетинг с помощью RFM-анализа и триггерных рассылок. Персонализируйте предложения для каждого клиента и увеличивайте средний чек на 25%.
-            </p>
-            <Button size="lg" onClick={() => setContactFormOpen(true)}>
-              Запустить маркетинг с Delever
-            </Button>
-          </div>
+        <section className="container mx-auto max-w-7xl mb-12">
+          <FadeInOnScroll>
+            <div className="text-center max-w-3xl mx-auto">
+              <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6 tracking-tight">
+                Маркетинг и лояльность
+                <br />
+                <span className="bg-gradient-brand bg-clip-text text-transparent">которые работают</span>
+              </h1>
+              <p className="text-xl text-brand-darkBlue/80 mb-8 font-light leading-relaxed">
+                Автоматизируйте маркетинг с помощью RFM-анализа и триггерных рассылок. Персонализируйте предложения для каждого клиента и увеличивайте средний чек на 25%.
+              </p>
+              <Button size="lg" onClick={() => setContactFormOpen(true)}>
+                Запустить маркетинг с Delever
+              </Button>
+            </div>
+          </FadeInOnScroll>
         </section>
 
         {/* Features */}
@@ -70,16 +73,15 @@ export function Marketing() {
           <div className="container mx-auto max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-xl p-6 shadow-sm border-2 border-brand-lightTeal/30"
-                >
+                <FadeInOnScroll key={idx} delay={idx * 0.1}>
+                  <div className="bg-white rounded-2xl p-8 shadow-soft border border-brand-lightTeal/20 hover:shadow-medium transition-all duration-300 flex flex-col h-full">
                   <div className="text-brand-darkBlue mb-4">{feature.icon}</div>
                   <h3 className="text-2xl font-semibold text-brand-darkBlue mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-brand-darkBlue/80">{feature.description}</p>
-                </div>
+                  <p className="text-brand-darkBlue/80 flex-grow leading-relaxed">{feature.description}</p>
+                  </div>
+                </FadeInOnScroll>
               ))}
             </div>
           </div>
@@ -88,25 +90,26 @@ export function Marketing() {
         {/* Scenarios */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBeige">
           <div className="container mx-auto max-w-7xl">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-brand-darkBlue mb-4">
-                Примеры сценариев
-              </h2>
-              <p className="text-xl text-brand-darkBlue/80">
-                Готовые решения для типичных маркетинговых задач
-              </p>
-            </div>
+            <FadeInOnScroll>
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-brand-darkBlue mb-4 tracking-tight">
+                  Примеры сценариев
+                </h2>
+                <p className="text-xl text-brand-darkBlue/80 font-light">
+                  Готовые решения для типичных маркетинговых задач
+                </p>
+              </div>
+            </FadeInOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {scenarios.map((scenario, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-xl p-6 border-2 border-brand-lightTeal/30"
-                >
+                <FadeInOnScroll key={idx} delay={idx * 0.1}>
+                  <div className="bg-white rounded-2xl p-6 border border-brand-lightTeal/20 shadow-soft hover:shadow-medium transition-all duration-300 flex flex-col h-full">
                   <h3 className="text-xl font-semibold text-brand-darkBlue mb-3">
                     {scenario.title}
                   </h3>
-                  <p className="text-brand-darkBlue/80">{scenario.description}</p>
-                </div>
+                  <p className="text-brand-darkBlue/80 flex-grow leading-relaxed">{scenario.description}</p>
+                  </div>
+                </FadeInOnScroll>
               ))}
             </div>
           </div>

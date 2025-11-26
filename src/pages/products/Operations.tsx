@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
 import { PageNavigation } from '@/components/PageNavigation'
+import { FadeInOnScroll } from '@/components/ui/FadeInOnScroll'
 import { Truck, Users, Monitor, Clock, TrendingDown, CheckCircle, ArrowRight } from 'lucide-react'
 
 export function Operations() {
@@ -40,20 +41,22 @@ export function Operations() {
     <>
       <div className="min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         {/* Hero */}
-        <section className="container mx-auto max-w-7xl mb-20">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6">
-              Операции доставки
-              <br />
-              <span className="bg-gradient-brand bg-clip-text text-transparent">под полным контролем</span>
-            </h1>
-            <p className="text-xl text-brand-darkBlue/80 mb-8">
-              Управляйте диспетчеризацией, курьерами и кухней из одного окна. Автоматизация процессов снижает ошибки и ускоряет доставку на 30%.
-            </p>
-            <Button size="lg" onClick={() => setContactFormOpen(true)}>
-              Оптимизировать операции
-            </Button>
-          </div>
+        <section className="container mx-auto max-w-7xl mb-12">
+          <FadeInOnScroll>
+            <div className="text-center max-w-3xl mx-auto">
+              <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6 tracking-tight">
+                Операции доставки
+                <br />
+                <span className="bg-gradient-brand bg-clip-text text-transparent">под полным контролем</span>
+              </h1>
+              <p className="text-xl text-brand-darkBlue/80 mb-8 font-light leading-relaxed">
+                Управляйте диспетчеризацией, курьерами и кухней из одного окна. Автоматизация процессов снижает ошибки и ускоряет доставку на 30%.
+              </p>
+              <Button size="lg" onClick={() => setContactFormOpen(true)}>
+                Оптимизировать операции
+              </Button>
+            </div>
+          </FadeInOnScroll>
         </section>
 
         {/* Features */}
@@ -61,16 +64,15 @@ export function Operations() {
           <div className="container mx-auto max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-xl p-6 shadow-sm border-2 border-brand-lightTeal/30"
-                >
+                <FadeInOnScroll key={idx} delay={idx * 0.1}>
+                  <div className="bg-white rounded-2xl p-8 shadow-soft border border-brand-lightTeal/20 hover:shadow-medium transition-all duration-300 flex flex-col h-full">
                   <div className="text-brand-darkBlue mb-4">{feature.icon}</div>
                   <h3 className="text-2xl font-semibold text-brand-darkBlue mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-brand-darkBlue/80">{feature.description}</p>
-                </div>
+                  <p className="text-brand-darkBlue/80 flex-grow leading-relaxed">{feature.description}</p>
+                  </div>
+                </FadeInOnScroll>
               ))}
             </div>
           </div>
@@ -91,7 +93,7 @@ export function Operations() {
               {['iiko', 'R-Keeper', 'Syrve', 'Poster', 'Paloma'].map((pos, idx) => (
                 <div
                   key={idx}
-                  className="bg-white px-6 py-3 rounded-lg border-2 border-brand-lightTeal/30 text-sm font-medium text-brand-darkBlue hover:border-brand-darkBlue transition-all"
+                  className="bg-white px-6 py-3 rounded-lg border border-brand-lightTeal/20 text-sm font-medium text-brand-darkBlue hover:border-brand-darkBlue/30 hover:shadow-soft transition-all"
                 >
                   {pos}
                 </div>

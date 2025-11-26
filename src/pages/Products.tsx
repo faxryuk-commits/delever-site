@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
 import { PageNavigation } from '@/components/PageNavigation'
 import { ProcessFlow } from '@/components/home/ProcessFlow'
+import { FadeInOnScroll } from '@/components/ui/FadeInOnScroll'
 import { 
   ShoppingCart, 
   Truck, 
@@ -130,17 +131,19 @@ export function Products() {
     <>
       <div className="min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         {/* Hero */}
-        <section className="container mx-auto max-w-7xl mb-20">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6">
-              Всё необходимое для роста
-              <br />
-              <span className="bg-gradient-brand bg-clip-text text-transparent">вашего бизнеса</span>
-            </h1>
-            <p className="text-xl text-brand-darkBlue/80 mb-8 leading-relaxed">
-              Четыре модуля, которые работают вместе как единая система. От приёма заказов до аналитики и маркетинга — всё в одной платформе.
-            </p>
-          </div>
+        <section className="container mx-auto max-w-7xl mb-12">
+          <FadeInOnScroll>
+            <div className="text-center max-w-4xl mx-auto">
+              <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6 tracking-tight">
+                Всё необходимое для роста
+                <br />
+                <span className="bg-gradient-brand bg-clip-text text-transparent">вашего бизнеса</span>
+              </h1>
+              <p className="text-xl text-brand-darkBlue/80 mb-8 leading-relaxed font-light">
+                Четыре модуля, которые работают вместе как единая система. От приёма заказов до аналитики и маркетинга — всё в одной платформе.
+              </p>
+            </div>
+          </FadeInOnScroll>
         </section>
 
         {/* Process Flow */}
@@ -149,10 +152,8 @@ export function Products() {
         {/* Products Grid */}
         <section className="container mx-auto max-w-7xl space-y-24 mb-20 mt-20">
           {products.map((product, idx) => (
-            <div
-              key={idx}
-              className={`bg-gradient-to-br ${product.color} rounded-2xl p-8 md:p-12 shadow-lg`}
-            >
+            <FadeInOnScroll key={idx} delay={idx * 0.2}>
+              <div className={`bg-gradient-to-br ${product.color} rounded-2xl p-8 md:p-12 shadow-lg`}>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 {/* Left Column - Info */}
                 <div>
@@ -232,7 +233,8 @@ export function Products() {
                   </div>
                 </div>
               </div>
-            </div>
+              </div>
+            </FadeInOnScroll>
           ))}
         </section>
 

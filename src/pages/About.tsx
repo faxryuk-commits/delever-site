@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
 import { PageNavigation } from '@/components/PageNavigation'
+import { FadeInOnScroll } from '@/components/ui/FadeInOnScroll'
 import { Globe, TrendingUp, Users, Target, ArrowRight } from 'lucide-react'
 
 export function About() {
@@ -29,24 +30,27 @@ export function About() {
     <>
       <div className="min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         {/* Hero */}
-        <section className="container mx-auto max-w-7xl mb-20">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6">
-              О компании Delever
-            </h1>
-            <p className="text-xl text-brand-darkBlue/80 mb-8">
-              Мы создаём технологии, которые помогают ресторанам расти быстрее и работать эффективнее
-            </p>
-          </div>
+        <section className="container mx-auto max-w-7xl mb-12">
+          <FadeInOnScroll>
+            <div className="text-center max-w-3xl mx-auto">
+              <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6 tracking-tight">
+                О компании Delever
+              </h1>
+              <p className="text-xl text-brand-darkBlue/80 mb-8 font-light leading-relaxed">
+                Мы создаём технологии, которые помогают ресторанам расти быстрее и работать эффективнее
+              </p>
+            </div>
+          </FadeInOnScroll>
         </section>
 
         {/* History */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBeige">
           <div className="container mx-auto max-w-7xl">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-4xl font-bold text-brand-darkBlue mb-6">
-                Наша история
-              </h2>
+            <FadeInOnScroll>
+              <div className="max-w-3xl mx-auto">
+                <h2 className="text-4xl font-bold text-brand-darkBlue mb-6 tracking-tight">
+                  Наша история
+                </h2>
               <div className="space-y-4 text-brand-darkBlue/80 leading-relaxed">
                 <p>
                   Delever создан командой с опытом работы в крупных агрегаторах доставки, сетях ресторанов и разработке технологических решений. Мы знаем проблемы ресторанов изнутри.
@@ -55,22 +59,24 @@ export function About() {
                   Видя, как рестораны теряют прибыль на комиссиях агрегаторов и тратят время на ручную работу, мы решили создать единую платформу, которая решает все задачи доставки — от приёма заказов до аналитики и маркетинга.
                 </p>
                 <p>
-                  Сегодня Delever помогает более 500 заведениям в 5 странах увеличивать прибыль и упрощать операции.
+                  Сегодня Delever помогает более 1000 заведениям в 5 странах увеличивать прибыль и упрощать операции.
                 </p>
               </div>
-            </div>
+            </FadeInOnScroll>
           </div>
         </section>
 
         {/* Geography */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-7xl">
-            <div className="text-center mb-12">
-              <Globe className="h-12 w-12 text-brand-darkBlue mx-auto mb-4" />
-              <h2 className="text-4xl font-bold text-brand-darkBlue mb-4">
-                География и масштабы
-              </h2>
-            </div>
+            <FadeInOnScroll>
+              <div className="text-center mb-12">
+                <Globe className="h-12 w-12 text-brand-darkBlue mx-auto mb-4" />
+                <h2 className="text-4xl font-bold text-brand-darkBlue mb-4 tracking-tight">
+                  География и масштабы
+                </h2>
+              </div>
+            </FadeInOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-brand-darkBlue mb-2">5</div>
@@ -95,23 +101,24 @@ export function About() {
         {/* Values */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="container mx-auto max-w-7xl">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-brand-darkBlue mb-4">
-                Наши ценности
-              </h2>
-            </div>
+            <FadeInOnScroll>
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-brand-darkBlue mb-4 tracking-tight">
+                  Наши ценности
+                </h2>
+              </div>
+            </FadeInOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {values.map((value, idx) => (
-                <div
-                  key={idx}
-                  className="bg-brand-lightBeige rounded-xl p-6 border-2 border-brand-lightTeal/30"
-                >
+                <FadeInOnScroll key={idx} delay={idx * 0.1}>
+                  <div className="bg-brand-lightBeige rounded-2xl p-6 border border-brand-lightTeal/20 shadow-soft hover:shadow-medium transition-all duration-300 flex flex-col h-full">
                   <div className="text-brand-darkBlue mb-4">{value.icon}</div>
                   <h3 className="text-xl font-semibold text-brand-darkBlue mb-2">
                     {value.title}
                   </h3>
-                  <p className="text-brand-darkBlue/80">{value.description}</p>
-                </div>
+                  <p className="text-brand-darkBlue/80 flex-grow leading-relaxed">{value.description}</p>
+                  </div>
+                </FadeInOnScroll>
               ))}
             </div>
           </div>

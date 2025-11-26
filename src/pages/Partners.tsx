@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/Button'
 import { ContactForm } from '@/components/ContactForm'
 import { PageNavigation } from '@/components/PageNavigation'
+import { FadeInOnScroll } from '@/components/ui/FadeInOnScroll'
 import { Users, Percent, Globe, TrendingUp, ArrowRight } from 'lucide-react'
 
 export function Partners() {
@@ -34,42 +35,45 @@ export function Partners() {
     <>
       <div className="min-h-screen pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         {/* Hero */}
-        <section className="container mx-auto max-w-7xl mb-20">
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6">
-              Партнёрская программа
-              <br />
-              <span className="bg-gradient-brand bg-clip-text text-transparent">Delever</span>
-            </h1>
-            <p className="text-xl text-brand-darkBlue/80 mb-8">
-              Зарабатывайте, рекомендуя Delever своим клиентам. Получайте до 20% с первого платежа и регулярные выплаты за каждого привлечённого клиента.
-            </p>
-            <Button size="lg" onClick={() => setContactFormOpen(true)}>
-              Стать партнёром
-            </Button>
-          </div>
+        <section className="container mx-auto max-w-7xl mb-12">
+          <FadeInOnScroll>
+            <div className="text-center max-w-3xl mx-auto">
+              <h1 className="text-5xl md:text-6xl font-bold text-brand-darkBlue mb-6 tracking-tight">
+                Партнёрская программа
+                <br />
+                <span className="bg-gradient-brand bg-clip-text text-transparent">Delever</span>
+              </h1>
+              <p className="text-xl text-brand-darkBlue/80 mb-8 font-light leading-relaxed">
+                Зарабатывайте, рекомендуя Delever своим клиентам. Получайте до 20% с первого платежа и регулярные выплаты за каждого привлечённого клиента.
+              </p>
+              <Button size="lg" onClick={() => setContactFormOpen(true)}>
+                Стать партнёром
+              </Button>
+            </div>
+          </FadeInOnScroll>
         </section>
 
         {/* For Whom */}
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBeige">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-brand-darkBlue mb-4">
-            Для кого программа
-          </h2>
-        </div>
+        <FadeInOnScroll>
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-brand-darkBlue mb-4 tracking-tight">
+              Для кого программа
+            </h2>
+          </div>
+        </FadeInOnScroll>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {partnerTypes.map((type, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-xl p-6 border-2 border-brand-lightTeal/30"
-            >
+            <FadeInOnScroll key={idx} delay={idx * 0.1}>
+              <div className="bg-white rounded-2xl p-6 border border-brand-lightTeal/20 shadow-soft hover:shadow-medium transition-all duration-300 flex flex-col h-full">
               <div className="text-brand-darkBlue mb-4">{type.icon}</div>
               <h3 className="text-xl font-semibold text-brand-darkBlue mb-2">
                 {type.title}
               </h3>
-              <p className="text-brand-darkBlue/70 text-sm">{type.description}</p>
-            </div>
+              <p className="text-brand-darkBlue/70 text-sm flex-grow leading-relaxed">{type.description}</p>
+              </div>
+            </FadeInOnScroll>
           ))}
         </div>
       </div>
@@ -78,15 +82,18 @@ export function Partners() {
         {/* Model */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="container mx-auto max-w-7xl">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-brand-darkBlue mb-4">
-                Условия сотрудничества
-              </h2>
-              <p className="text-xl text-brand-darkBlue/80">
-                Прозрачная модель вознаграждения с регулярными выплатами
-              </p>
-            </div>
-            <div className="max-w-2xl mx-auto bg-brand-lightBeige rounded-xl p-8 border-2 border-brand-darkBlue/20">
+            <FadeInOnScroll>
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-brand-darkBlue mb-4 tracking-tight">
+                  Условия сотрудничества
+                </h2>
+                <p className="text-xl text-brand-darkBlue/80 font-light">
+                  Прозрачная модель вознаграждения с регулярными выплатами
+                </p>
+              </div>
+            </FadeInOnScroll>
+            <FadeInOnScroll delay={0.2}>
+              <div className="max-w-2xl mx-auto bg-brand-lightBeige rounded-2xl p-8 border border-brand-darkBlue/10 shadow-soft">
               <div className="flex items-center justify-center mb-6">
                 <Percent className="h-12 w-12 text-brand-darkBlue" />
               </div>
@@ -105,18 +112,21 @@ export function Partners() {
                   </div>
                 </div>
               </div>
-            </div>
+              </div>
+            </FadeInOnScroll>
           </div>
         </section>
 
         {/* Why */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-brand-lightBlue">
           <div className="container mx-auto max-w-7xl">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-brand-darkBlue mb-4">
-                Почему партнёры выбирают нас
-              </h2>
-            </div>
+            <FadeInOnScroll>
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold text-brand-darkBlue mb-4 tracking-tight">
+                  Почему партнёры выбирают нас
+                </h2>
+              </div>
+            </FadeInOnScroll>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-4xl font-bold text-brand-darkBlue mb-2">1000+</div>
