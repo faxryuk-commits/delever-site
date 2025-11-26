@@ -1,7 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Button } from './ui/Button'
-import { cn } from '@/lib/utils'
 
 interface NavigationItem {
   path: string

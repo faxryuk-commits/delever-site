@@ -73,7 +73,13 @@ function AnimatedCounter({ value, suffix = '', prefix = '', duration = 2000, for
   )
 }
 
-const stats = [
+const stats: Array<{
+  value: number
+  suffix?: string
+  prefix?: string
+  label: string
+  format?: 'M' | 'K' | 'number'
+}> = [
   { value: 13000000, suffix: '+', label: 'Заказов обработано', format: 'M' },
   { value: 5, suffix: '', label: 'Стран', format: 'number' },
   { value: 1000, suffix: '+', label: 'Ресторанов и магазинов', format: 'K' },
