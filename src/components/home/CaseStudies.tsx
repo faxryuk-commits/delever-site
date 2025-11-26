@@ -47,9 +47,9 @@ const cases: CaseStudy[] = [
 
 export function CaseStudies() {
   return (
-    <section id="cases" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-subtle">
+    <section id="cases" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-subtle">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
             Результаты наших клиентов
           </h2>
@@ -87,7 +87,7 @@ export function CaseStudies() {
                 ))}
               </div>
 
-              <div className="bg-gradient-accent rounded-xl p-4 border border-brand-darkBlue/10 mt-auto">
+              <div className="bg-gradient-accent rounded-xl p-4 border border-brand-darkBlue/10 mt-auto min-h-[60px] flex items-center">
                 <p className="text-sm font-semibold text-brand-darkBlue">
                   {caseStudy.highlight}
                 </p>

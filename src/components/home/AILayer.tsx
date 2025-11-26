@@ -25,9 +25,9 @@ const aiFeatures = [
 
 export function AILayer() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-accent rounded-2xl mb-5">
             <Brain className="h-8 w-8 text-brand-darkBlue" />
           </div>

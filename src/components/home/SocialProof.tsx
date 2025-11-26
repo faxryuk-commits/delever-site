@@ -89,9 +89,9 @@ const stats: Array<{
 
 export function SocialProof() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
             Delever в цифрах
           </h2>

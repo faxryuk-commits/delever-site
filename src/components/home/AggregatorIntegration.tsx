@@ -19,9 +19,9 @@ const features = [
 
 export function AggregatorIntegration() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-subtle">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-subtle">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
             Все агрегаторы в одном окне
           </h2>
@@ -30,7 +30,7 @@ export function AggregatorIntegration() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           {/* Left Column */}
           <div>
             <div className="bg-white rounded-2xl p-8 shadow-soft border border-brand-lightTeal/20 mb-6">

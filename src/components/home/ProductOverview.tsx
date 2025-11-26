@@ -34,9 +34,9 @@ const products = [
 
 export function ProductOverview() {
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-accent">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-accent">
       <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-4 tracking-tight">
             Всё необходимое для роста вашего бизнеса
           </h2>
@@ -46,9 +46,9 @@ export function ProductOverview() {
         </div>
 
         {/* Категории в стиле Deliverect */}
-        <div className="mb-12">
+        <div className="mb-10">
           <h3 className="text-2xl font-semibold text-brand-darkBlue mb-6">Продажи и маркетинг</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             {[products[0], products[3]].map((product, idx) => (
               <Link
                 key={idx}
@@ -71,7 +71,7 @@ export function ProductOverview() {
           </div>
         </div>
 
-        <div className="mb-12">
+        <div className="mb-10">
           <h3 className="text-2xl font-semibold text-brand-darkBlue mb-6">Операции и аналитика</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[products[1], products[2]].map((product, idx) => (

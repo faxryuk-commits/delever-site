@@ -10,13 +10,13 @@ export function Hero() {
     <>
       <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-gradient-subtle">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center max-w-5xl mx-auto mb-16">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-brand-darkBlue mb-6 leading-[1.1] tracking-tight">
+          <div className="text-center max-w-5xl mx-auto mb-12">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-brand-darkBlue mb-5 leading-[1.1] tracking-tight">
               Единая платформа
               <br />
               <span className="bg-gradient-brand bg-clip-text text-transparent">для управления доставкой</span>
             </h1>
-            <p className="text-xl md:text-2xl text-brand-darkBlue/75 mb-10 max-w-3xl mx-auto leading-relaxed font-light">
+            <p className="text-xl md:text-2xl text-brand-darkBlue/75 mb-8 max-w-3xl mx-auto leading-relaxed font-light">
               Управляйте всеми каналами продаж, операциями доставки и аналитикой из одного места. Запустите собственные каналы продаж, автоматизируйте работу с агрегаторами и увеличьте прибыль уже через неделю.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -32,7 +32,7 @@ export function Hero() {
           </div>
 
           {/* Statistics */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-6xl mx-auto mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-6xl mx-auto mb-12">
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-brand-darkBlue mb-2 tracking-tight">13M+</div>
               <div className="text-sm md:text-base text-brand-darkBlue/65 font-medium">Заказов обработано</div>
