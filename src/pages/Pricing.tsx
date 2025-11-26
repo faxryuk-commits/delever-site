@@ -270,7 +270,7 @@ export function Pricing() {
             {addOns.map((addon, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-xl p-6 border-2 border-brand-lightTeal/30 hover:shadow-lg transition-shadow"
+                className="bg-white rounded-xl p-6 border border-brand-lightTeal/20 shadow-soft hover:shadow-medium transition-all duration-300"
               >
                 <h3 className="text-lg font-semibold text-brand-darkBlue mb-3">
                   {addon.name}
@@ -303,7 +303,7 @@ export function Pricing() {
             {oneTime.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-xl p-6 border-2 border-brand-lightTeal/30 hover:shadow-lg transition-shadow"
+                className="bg-white rounded-xl p-6 border border-brand-lightTeal/20 shadow-soft hover:shadow-medium transition-all duration-300"
               >
                 <h3 className="text-lg font-semibold text-brand-darkBlue mb-3">
                   {item.name}
@@ -336,7 +336,7 @@ export function Pricing() {
             {additional.map((item, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-xl p-6 border-2 border-brand-lightTeal/30 hover:shadow-lg transition-shadow"
+                className="bg-white rounded-xl p-6 border border-brand-lightTeal/20 shadow-soft hover:shadow-medium transition-all duration-300"
               >
                 <h3 className="text-lg font-semibold text-brand-darkBlue mb-3">
                   {item.name}
