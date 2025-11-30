@@ -35,6 +35,10 @@
         }
       ]
     }
-  ]
+  ],
+  "functions": {
+    "api/verify-admin.ts": {
+      "runtime": "edge"
+    }
+  }
 }
-

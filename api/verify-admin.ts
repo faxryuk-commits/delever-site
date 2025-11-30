@@ -10,13 +10,24 @@ export default async function handler(req: Request) {
   const adminToken = url.searchParams.get('admin_token')
   const editMode = url.searchParams.get('edit_mode')
 
-  // Получаем токен из переменной окружения (в Edge runtime используется другой способ)
-  const validToken = (globalThis as any).ADMIN_EDIT_TOKEN || 
-    (typeof process !== 'undefined' ? process.env.ADMIN_EDIT_TOKEN : null) ||
-    'admin-access-fallback'
+  // Получаем токен из переменной окружения
+  // В Edge runtime переменные окружения доступны через process.env
+  const validToken = process.env.ADMIN_EDIT_TOKEN
+
+  if (!validToken) {
+    return new Response(JSON.stringify({ 
+      authorized: false,
+      message: 'ADMIN_EDIT_TOKEN not configured'
+    }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+  }
 
   // Проверяем токен
-  if (adminToken === validToken && editMode === 'true') {
+  if (adminToken && editMode === 'true' && adminToken === validToken) {
     // Токен валидный - разрешаем доступ
     return new Response(JSON.stringify({ 
       authorized: true,
@@ -34,7 +45,9 @@ export default async function handler(req: Request) {
   // Токен невалидный
   return new Response(JSON.stringify({ 
     authorized: false,
-    message: 'Invalid token'
+    message: 'Invalid token',
+    received: adminToken ? 'token provided' : 'no token',
+    expected: validToken ? 'token configured' : 'no token configured'
   }), {
     status: 401,
     headers: {
