@@ -11,8 +11,9 @@ export default async function handler(req: Request) {
   const editMode = url.searchParams.get('edit_mode')
 
   // Получаем токен из переменной окружения
-  // В Edge runtime переменные окружения доступны через process.env
-  const validToken = process.env.ADMIN_EDIT_TOKEN
+  // В Vercel Edge Functions переменные окружения доступны через process.env
+  // Используем type assertion для обхода проверки TypeScript
+  const validToken = (process as any).env?.ADMIN_EDIT_TOKEN
 
   if (!validToken) {
     return new Response(JSON.stringify({ 
