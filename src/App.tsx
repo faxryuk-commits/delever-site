@@ -16,30 +16,6 @@ import { Partners } from './pages/Partners'
 import { About } from './pages/About'
 import { NotFound } from './pages/NotFound'
 
-function PublicLayout() {
-  return (
-    <div className="min-h-screen flex flex-col bg-white dark:bg-gray-950">
-      <Header />
-      <main className="flex-1">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/products/channels" element={<Channels />} />
-          <Route path="/products/operations" element={<Operations />} />
-          <Route path="/products/analytics" element={<Analytics />} />
-          <Route path="/products/marketing" element={<Marketing />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/integrations" element={<Integrations />} />
-          <Route path="/partners" element={<Partners />} />
-          <Route path="/about" element={<About />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
-  )
-}
-
 function App() {
   return (
     <ThemeProvider>
