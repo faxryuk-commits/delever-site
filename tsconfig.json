@@ -21,6 +21,7 @@
     }
   },
   "include": ["src", "api"],
+  "typeRoots": ["./node_modules/@types", "./api"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
 

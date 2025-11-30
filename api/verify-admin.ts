@@ -5,21 +5,14 @@ export const config = {
   runtime: 'edge',
 }
 
-// В Vercel Edge Functions переменные окружения доступны через параметр env
-interface Env {
-  ADMIN_EDIT_TOKEN?: string
-}
-
-export default async function handler(
-  req: Request,
-  env: Env
-): Promise<Response> {
+export default async function handler(req: Request): Promise<Response> {
   const url = new URL(req.url)
   const adminToken = url.searchParams.get('admin_token')
   const editMode = url.searchParams.get('edit_mode')
 
   // Получаем токен из переменной окружения
-  const validToken = env.ADMIN_EDIT_TOKEN
+  // В Vercel Edge Functions переменные окружения доступны через process.env
+  const validToken = process.env.ADMIN_EDIT_TOKEN
 
   if (!validToken) {
     return new Response(JSON.stringify({ 
