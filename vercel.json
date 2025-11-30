@@ -16,8 +16,7 @@
       "has": [
         {
           "type": "query",
-          "key": "admin_token",
-          "value": "admin-access"
+          "key": "admin_token"
         },
         {
           "type": "query",
