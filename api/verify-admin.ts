@@ -10,8 +10,10 @@ export default async function handler(req: Request) {
   const adminToken = url.searchParams.get('admin_token')
   const editMode = url.searchParams.get('edit_mode')
 
-  // Получаем токен из переменной окружения
-  const validToken = process.env.ADMIN_EDIT_TOKEN || 'admin-access-fallback'
+  // Получаем токен из переменной окружения (в Edge runtime используется другой способ)
+  const validToken = (globalThis as any).ADMIN_EDIT_TOKEN || 
+    (typeof process !== 'undefined' ? process.env.ADMIN_EDIT_TOKEN : null) ||
+    'admin-access-fallback'
 
   // Проверяем токен
   if (adminToken === validToken && editMode === 'true') {
