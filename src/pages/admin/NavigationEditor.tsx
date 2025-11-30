@@ -4,12 +4,11 @@ import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { Plus, Trash2, GripVertical } from 'lucide-react'
 import { toast } from 'sonner'
-import type { NavigationItem, FooterLink } from '@/contexts/ContentContext'
+import type { FooterLink } from '@/contexts/ContentContext'
 
 export function NavigationEditor() {
   const { navigation, footerLinks, updateNavigation, updateFooterLinks } = useContent()
   const [newNavItem, setNewNavItem] = useState({ path: '', label: '' })
-  const [editingNav, setEditingNav] = useState<string | null>(null)
 
   const handleAddNav = () => {
     if (!newNavItem.path || !newNavItem.label) {

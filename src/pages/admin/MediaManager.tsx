@@ -87,10 +87,12 @@ export function MediaManager() {
             className="hidden"
             accept="image/*,.pdf,.doc,.docx"
           />
-          <Button as="label" htmlFor="file-upload">
-            <Upload className="h-4 w-4 mr-2" />
-            Загрузить файлы
-          </Button>
+          <label htmlFor="file-upload" className="cursor-pointer inline-block">
+            <div className="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium bg-gradient-dark text-white hover:opacity-90 font-semibold shadow-soft hover:shadow-medium transition-all">
+              <Upload className="h-4 w-4 mr-2" />
+              Загрузить файлы
+            </div>
+          </label>
         </div>
       </div>
 
@@ -116,10 +118,12 @@ export function MediaManager() {
             {searchTerm ? 'Ничего не найдено' : 'Файлы пока не загружены'}
           </p>
           {!searchTerm && (
-            <Button as="label" htmlFor="file-upload">
-              <Upload className="h-4 w-4 mr-2" />
-              Загрузить первый файл
-            </Button>
+            <label htmlFor="file-upload" className="cursor-pointer inline-block">
+              <div className="inline-flex items-center justify-center rounded-lg px-6 py-3 text-base font-medium bg-gradient-dark text-white hover:opacity-90 font-semibold shadow-soft hover:shadow-medium transition-all">
+                <Upload className="h-4 w-4 mr-2" />
+                Загрузить первый файл
+              </div>
+            </label>
           )}
         </div>
       ) : (
