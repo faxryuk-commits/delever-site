@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Menu, X, Moon, Sun, ShoppingCart, Truck, BarChart3, Megaphone, Plug, ChevronDown } from 'lucide-react'
-import { useTheme } from '@/contexts/ThemeContext'
+import { Menu, X, ShoppingCart, Truck, BarChart3, Megaphone, Plug, ChevronDown } from 'lucide-react'
 import { Button } from './ui/Button'
 import { ContactForm } from './ContactForm'
 import { Logo } from './Logo'
@@ -16,7 +15,6 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [contactFormOpen, setContactFormOpen] = useState(false)
   const [productsMenuOpen, setProductsMenuOpen] = useState(false)
-  const { theme, toggleTheme } = useTheme()
   const location = useLocation()
 
   const productCategories = [
@@ -99,7 +97,7 @@ export function Header() {
                   Продукты
                   <ChevronDown className={cn('h-3.5 w-3.5 transition-transform duration-200', productsMenuOpen && 'rotate-180')} />
                 </DropdownMenuTrigger>
-                <DropdownMenuContent align="start" className="w-[680px] p-8 mt-2 shadow-lg border border-brand-lightTeal/30">
+                <DropdownMenuContent align="start" className="w-[680px] p-8 mt-2 shadow-lg border border-brand-lightTeal/30 bg-white">
                   <div className="grid grid-cols-4 gap-8">
                     {productCategories.map((category, catIdx) => (
                       <div key={catIdx} className="space-y-4">
@@ -185,17 +183,6 @@ export function Header() {
 
             {/* Right side controls */}
             <div className="flex items-center gap-2">
-              {/* Theme Toggle */}
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={toggleTheme}
-                className="hidden sm:flex h-9 w-9 p-0 rounded-lg"
-                aria-label="Toggle theme"
-              >
-                {theme === 'light' ? <Moon className="h-4.5 w-4.5" /> : <Sun className="h-4.5 w-4.5" />}
-              </Button>
-
               {/* CTA Buttons */}
               <div className="hidden md:flex items-center gap-2">
                 <Button 

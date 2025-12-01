@@ -46,7 +46,7 @@
   }
 
   p {
-    @apply leading-relaxed;
+    @apply leading-relaxed text-brand-darkBlue;
   }
 }
 

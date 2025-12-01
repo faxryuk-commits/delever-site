@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { ThemeProvider } from './contexts/ThemeContext'
 import { Toaster } from 'sonner'
 import * as Tooltip from '@radix-ui/react-tooltip'
 import { Header } from './components/Header'
@@ -18,10 +17,9 @@ import { NotFound } from './pages/NotFound'
 
 function App() {
   return (
-    <ThemeProvider>
-      <Tooltip.Provider>
-        <BrowserRouter>
-          <div className="min-h-screen flex flex-col bg-white dark:bg-gray-950">
+    <Tooltip.Provider>
+      <BrowserRouter>
+        <div className="min-h-screen flex flex-col bg-white">
             <Header />
             <main className="flex-1">
               <Routes>
@@ -40,10 +38,9 @@ function App() {
             </main>
             <Footer />
           </div>
-          <Toaster position="top-right" />
-        </BrowserRouter>
-      </Tooltip.Provider>
-    </ThemeProvider>
+        <Toaster position="top-right" />
+      </BrowserRouter>
+    </Tooltip.Provider>
   )
 }
 

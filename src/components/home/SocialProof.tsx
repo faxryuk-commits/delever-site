@@ -55,10 +55,12 @@ function AnimatedCounter({ value, suffix = '', prefix = '', duration = 2000, for
 
   const formatNumber = (num: number) => {
     if (format === 'M') {
-      return (num / 1000000).toFixed(0)
+      const millions = num / 1000000
+      return millions >= 1 ? millions.toFixed(0) : '0'
     }
     if (format === 'K') {
-      return (num / 1000).toFixed(0)
+      const thousands = num / 1000
+      return thousands >= 1 ? thousands.toFixed(0) : '0'
     }
     return num.toLocaleString()
   }
@@ -84,7 +86,7 @@ const stats: Array<{
   { value: 5, suffix: '', label: 'Стран', format: 'number' },
   { value: 1000, suffix: '+', label: 'Ресторанов и магазинов', format: 'K' },
   { value: 40, suffix: '+', label: 'Интеграций', format: 'number' },
-  { value: 100, prefix: '$', suffix: 'M+', label: 'Продаж через платформу', format: 'M' },
+  { value: 100000000, prefix: '$', suffix: '+', label: 'Продаж через платформу', format: 'M' },
 ]
 
 export function SocialProof() {

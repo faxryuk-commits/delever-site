@@ -30,20 +30,26 @@ export function ContactForm({ open, onOpenChange, tag }: ContactFormProps) {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Здесь будет отправка формы на сервер
     try {
-      // await fetch('/api/contact', { method: 'POST', body: JSON.stringify({ ...formData, tag }) })
-      console.log('Form submitted:', { ...formData, tag })
-      
-      // Имитация задержки
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
+      const response = await fetch('/api/send-telegram', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...formData, tag }),
+      })
+
+      if (!response.ok) {
+        const error = await response.json()
+        throw new Error(error.error || 'Ошибка отправки')
+      }
+
       alert('Спасибо! Мы свяжемся с вами в ближайшее время.')
       setFormData({ name: '', phone: '', email: '', company: '', message: '' })
       onOpenChange(false)
     } catch (error) {
       console.error('Error submitting form:', error)
-      alert('Произошла ошибка. Попробуйте позже.')
+      alert('Произошла ошибка при отправке. Попробуйте позже или свяжитесь с нами напрямую через Telegram: @delever_sales_bot')
     } finally {
       setIsSubmitting(false)
     }

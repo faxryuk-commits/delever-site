@@ -1,4 +1,3 @@
-import { useTheme } from '@/contexts/ThemeContext'
 import { cn } from '@/lib/utils'
 
 interface LogoProps {
@@ -8,8 +7,6 @@ interface LogoProps {
 }
 
 export function Logo({ variant, className, height = 40 }: LogoProps) {
-  const { theme } = useTheme()
-
   // Определяем какой логотип использовать
   const getLogoPath = () => {
     if (variant) {
@@ -25,11 +22,6 @@ export function Logo({ variant, className, height = 40 }: LogoProps) {
         default:
           return '/logo/logo-horizontal.svg'
       }
-    }
-
-    // Автоматический выбор в зависимости от темы
-    if (theme === 'dark') {
-      return '/logo/logo-white.svg'
     }
     return '/logo/logo-horizontal.svg'
   }

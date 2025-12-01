@@ -7,36 +7,25 @@ import { Check, ArrowRight, Percent, CreditCard, Gift } from 'lucide-react'
 
 const plans = [
   {
-    name: 'Light',
-    orders: 300,
-    price: '$50',
-    priceUzs: '650,000 soʼm',
-    period: '/месяц',
-    description: 'Для небольших заведений',
-    features: ['POS интеграция', 'Telegram-бот', 'Базовый CRM', 'Отчёты'],
-    highlight: false,
-  },
-  {
     name: 'Start',
     orders: 1000,
-    price: '$100',
-    priceUzs: '1,300,000 soʼm',
+    price: '1,300,000 soʼm',
     period: '/месяц',
     description: 'Для растущего бизнеса',
     features: [
-      'Всё из Light',
+      'POS интеграция',
+      'Telegram-бот',
       'Веб-сайт',
       'RFM анализ',
       'Курьерский модуль',
       'Расширенная аналитика',
     ],
-    highlight: true,
+    highlight: false,
   },
   {
     name: 'Medium',
     orders: 3000,
-    price: '$250',
-    priceUzs: '3,250,000 soʼm',
+    price: '3,250,000 soʼm',
     period: '/месяц',
     description: 'Для сетей ресторанов',
     features: [
@@ -45,14 +34,15 @@ const plans = [
       'ABC-XYZ анализ',
       'Маркетинг модуль',
       'Приоритетная поддержка',
+      'Базовый CRM',
+      'Отчёты',
     ],
-    highlight: false,
+    highlight: true,
   },
   {
     name: 'Big',
     orders: 6000,
-    price: '$500',
-    priceUzs: '6,500,000 soʼm',
+    price: '6,500,000 soʼm',
     period: '/месяц',
     description: 'Для крупных сетей',
     features: [
@@ -67,8 +57,7 @@ const plans = [
   {
     name: 'Enterprise',
     orders: 10000,
-    price: '$1,000',
-    priceUzs: '13,000,000 soʼm',
+    price: '13,000,000 soʼm',
     period: '/месяц',
     description: 'Индивидуальные решения',
     features: [
@@ -83,29 +72,28 @@ const plans = [
 ]
 
 const addOns = [
-  { name: 'Агрегатор за одного', price: '$20', priceUzs: '260,000 soʼm', period: 'за филиал/месяц' },
-  { name: 'Агрегатор все', price: '$50', priceUzs: '650,000 soʼm', period: 'за филиал/месяц' },
-  { name: 'Курьер сервис', price: '$15', priceUzs: '195,000 soʼm', period: 'за сервис/месяц' },
-  { name: 'Киоск', price: '$70', priceUzs: '910,000 soʼm', period: 'за штуку/месяц' },
-  { name: 'Маркетинг', price: '$30', priceUzs: '390,000 soʼm', period: 'за бренд/месяц' },
-  { name: 'Дашборд', price: '$10', priceUzs: '130,000 soʼm', period: 'за бренд/месяц' },
-  { name: 'Бронь', price: '$10', priceUzs: '130,000 soʼm', period: 'за бренд/месяц' },
-  { name: 'Курьерка', price: '$20', priceUzs: '260,000 soʼm', period: 'за бренд/месяц' },
-  { name: 'Кухня', price: '$5', priceUzs: '65,000 soʼm', period: 'за филиал/месяц' },
+  { name: 'Агрегатор за одного', price: '260,000 soʼm', period: 'за филиал/месяц' },
+  { name: 'Агрегатор все', price: '650,000 soʼm', period: 'за филиал/месяц' },
+  { name: 'Курьер сервис', price: '195,000 soʼm', period: 'за сервис/месяц' },
+  { name: 'Киоск', price: '910,000 soʼm', period: 'за штуку/месяц' },
+  { name: 'Маркетинг', price: '390,000 soʼm', period: 'за бренд/месяц' },
+  { name: 'Дашборд', price: '130,000 soʼm', period: 'за бренд/месяц' },
+  { name: 'Бронь', price: '130,000 soʼm', period: 'за бренд/месяц' },
+  { name: 'Курьерка', price: '260,000 soʼm', period: 'за бренд/месяц' },
+  { name: 'Кухня', price: '65,000 soʼm', period: 'за филиал/месяц' },
 ]
 
 const oneTime = [
-  { name: 'White Label приложение', price: '$1,000', priceUzs: '13,000,000 soʼm', period: 'единоразово' },
+  { name: 'White Label приложение', price: '13,000,000 soʼm', period: 'единоразово' },
 ]
 
 const additional = [
-  { name: 'Выделенный менеджер', price: '$100', priceUzs: '1,300,000 soʼm', period: 'за бренд/месяц' },
+  { name: 'Выделенный менеджер', price: '1,300,000 soʼm', period: 'за бренд/месяц' },
 ]
 
 const perOrder = {
   name: 'Per order',
-  price: '$0.15',
-  priceUzs: '1,950 soʼm',
+  price: '1,950 soʼm',
   description: 'За каждый заказ сверх лимита тарифа',
 }
 
@@ -138,7 +126,7 @@ export function Pricing() {
                 <h3 className="text-xl font-semibold text-brand-darkBlue">Депозит</h3>
               </div>
               <p className="text-brand-darkBlue/80">
-                Клиент вносит депозит в размере <span className="font-bold">$500</span> перед началом работы. Депозит используется на погашение ежемесячной абонентской платы.
+                Клиент вносит депозит в размере <span className="font-bold">6,500,000 soʼm</span> перед началом работы. Депозит используется на погашение ежемесячной абонентской платы.
               </p>
             </div>
             <div className="bg-gradient-to-br from-brand-lightBeige to-brand-lightBlue rounded-xl p-6 border border-brand-darkBlue/10 shadow-soft">
@@ -171,7 +159,7 @@ export function Pricing() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {plans.map((plan, idx) => (
               <div
                 key={idx}
@@ -204,9 +192,6 @@ export function Pricing() {
                       {plan.period && (
                         <span className="text-brand-darkBlue/60 text-lg ml-1">{plan.period}</span>
                       )}
-                    </div>
-                    <div className="text-sm text-brand-darkBlue/60">
-                      {plan.priceUzs}
                     </div>
                   </div>
                   <p className="text-sm text-brand-darkBlue/70">{plan.description}</p>
@@ -247,9 +232,6 @@ export function Pricing() {
                 <div className="text-2xl font-bold text-brand-darkBlue">
                   {perOrder.price}
                 </div>
-                <div className="text-sm text-brand-darkBlue/60">
-                  {perOrder.priceUzs}
-                </div>
               </div>
             </div>
           </div>
@@ -278,9 +260,6 @@ export function Pricing() {
                 <div className="mb-2">
                   <div className="text-2xl font-bold text-brand-darkBlue">
                     {addon.price}
-                  </div>
-                  <div className="text-sm text-brand-darkBlue/60 mb-1">
-                    {addon.priceUzs}
                   </div>
                   <div className="text-sm text-brand-darkBlue/70">
                     {addon.period}
@@ -312,9 +291,6 @@ export function Pricing() {
                   <div className="text-2xl font-bold text-brand-darkBlue">
                     {item.price}
                   </div>
-                  <div className="text-sm text-brand-darkBlue/60 mb-1">
-                    {item.priceUzs}
-                  </div>
                   <div className="text-sm text-brand-darkBlue/70">
                     {item.period}
                   </div>
@@ -344,9 +320,6 @@ export function Pricing() {
                 <div className="mb-2">
                   <div className="text-2xl font-bold text-brand-darkBlue">
                     {item.price}
-                  </div>
-                  <div className="text-sm text-brand-darkBlue/60 mb-1">
-                    {item.priceUzs}
                   </div>
                   <div className="text-sm text-brand-darkBlue/70">
                     {item.period}
